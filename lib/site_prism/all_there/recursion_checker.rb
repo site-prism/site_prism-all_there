@@ -32,8 +32,8 @@ module SitePrism
       ]
     end
 
-    def expected(_map, type)
-      mapped_items[type].select { |name| elements_to_check.include?(name) }
+    def expected(map, type)
+      map[type].select { |name| elements_to_check.include?(name) }
     end
 
     def section_classes_to_check
