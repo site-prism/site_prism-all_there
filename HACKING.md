@@ -12,10 +12,9 @@ $ bundle
 Hacking commands you may need are ...
 
 ```bash
-$ bundle exec rake cukes # Run feature tests on firefox (Default browser)
-$ bundle exec rake cukes browser=chrome # Run feature tests on chrome
 $ bundle exec rake specs # Run all rspec tests
-$ bundle exec rake # Runs feature tests on firefox, then specs, then runs rubocop
+$ bundle exec rake cops # Run all rubocop tests
+$ bundle exec rake # Runs specs, then runs cops
 ```
 
 - Write your code. Make sure to add unit / feature tests AND documentation (If appropriate)
