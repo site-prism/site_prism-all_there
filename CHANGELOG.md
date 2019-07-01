@@ -1,4 +1,4 @@
-<!-- #392 - May 10th - Last update to this document -->
+<!-- #0 - Jul 1st - Last update to this document -->
 ## [Unreleased]
 ### Removed
 
@@ -8,14 +8,14 @@
 
 ### Fixed
 
-## [0.1] - 2019-xx-xx
+## [0.1] - 2019-07-01
 ### Added
 - Base code from previous repo with some extra puts/warn statements
 ([luke-hill])
 
 <!-- Releases -->
-[Unreleased]: https://github.com/natritmeyer/site_prism/compare/v0.1...master
-[0.1]:        https://github.com/natritmeyer/site_prism/compare/abc123...v0.1
+[Unreleased]: https://github.com/site-prism/site_prism-all_there/compare/v0.1...master
+[0.1]:        https://github.com/site-prism/site_prism-all_there/compare/a778bb...v0.1
 
 <!-- Contributors in chronological order -->
 [luke-hill]:      https://github.com/luke-hill
