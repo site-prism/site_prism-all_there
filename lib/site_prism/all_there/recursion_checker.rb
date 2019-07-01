@@ -33,7 +33,7 @@ module SitePrism
       # This will check all elements that are in any instance of any of the
       # +sections+ items defined in the current scope
       def sections_classes_all_there?
-        sections_classes_to_check.all?(&:all_there?)
+        sections_classes_to_check.flatten.all?(&:all_there?)
       end
 
       def section_classes_to_check
@@ -41,7 +41,7 @@ module SitePrism
       end
 
       def sections_classes_to_check
-        expected_item_map[3].map { |name| instance.send(name) }.flatten
+        expected_item_map[3].map { |name| instance.send(name) }
       end
 
       def expected_item_map
