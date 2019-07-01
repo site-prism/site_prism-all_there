@@ -11,22 +11,29 @@ module SitePrism
       end
 
       def all_there?
-        return false unless current_selection_all_there?
-        return false unless section_classes_all_there?
-
-        # Returning this final check here is fine, as the previous two checks must
-        # have returned +true+ in order to hit this part of the method-call
-        sections_classes_to_check.all?(&:all_there?)
+        current_class_all_there? &&
+          section_classes_all_there? &&
+          sections_classes_all_there?
       end
 
       private
 
-      def current_selection_all_there?
+      # This will check all elements that are in the current scope
+      # This is equivalent to checking a recursion value of +:none+
+      def current_class_all_there?
         expected_item_map.flatten.all? { |name| there?(name) }
       end
 
+      # This will check all elements that are in any of the individual
+      # +section+ items defined in the current scope
       def section_classes_all_there?
         section_classes_to_check.all?(&:all_there?)
+      end
+
+      # This will check all elements that are in any instance of any of the
+      # +sections+ items defined in the current scope
+      def sections_classes_all_there?
+        sections_classes_to_check.all?(&:all_there?)
       end
 
       def section_classes_to_check
