@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'site_prism'
+# require 'site_prism'
 
 describe SitePrism do
   describe '.configure' do
