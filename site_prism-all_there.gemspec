@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './lib/site_prism_at/all_there/version'
+require './lib/site_prism/all_there/version'
 
 Gem::Specification.new do |s|
   s.name        = 'site_prism-all_there'
@@ -10,13 +10,13 @@ Gem::Specification.new do |s|
   s.license     = 'BSD-3-Clause'
   s.authors     = ['Luke Hill']
   s.email       = %w[lukehill_uk@hotmail.com]
-  s.homepage    = 'https://github.com/site_prism/site_prism-all_there'
+  s.homepage    = 'https://github.com/site-prism/site_prism-all_there'
   s.metadata = {
     'bug_tracker_uri' => 'https://github.com/site-prism/site_prism-all_there/issues',
     'changelog_uri' => 'https://github.com/site-prism/site_prism-all_there/blob/master/CHANGELOG.md',
     'source_code_uri' => 'https://github.com/site-prism/site_prism-all_there',
   }
-  s.summary     = 'An extension to SitePrism to allow you to recursively check #all_there?'
+  s.summary     = 'An extension to allow you to recurse through your SitePrism Pages/Sections'
   s.description = 'SitePrism AllThere gives you a simple DSL in order to recursively query,
 page/section/element structures on your page - exclusively for use with the SitePrism gem.'
   s.files        = Dir.glob('lib/**/*') + %w[LICENSE.md README.md]

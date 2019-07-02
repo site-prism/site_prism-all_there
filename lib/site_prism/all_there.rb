@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'site_prism_at/all_there/recursion_checker'
+require 'site_prism/all_there/recursion_checker'
 
 # Configure the behaviour of the site_prism-all_there gem
 module SitePrism

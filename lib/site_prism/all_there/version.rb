@@ -2,6 +2,6 @@
 
 module SitePrism
   module AllThere
-    VERSION = '0.1'
+    VERSION = '0.1.1'
   end
 end
