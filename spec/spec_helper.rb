@@ -5,7 +5,7 @@ require 'capybara'
 
 $LOAD_PATH << './lib'
 
-require 'site_prism_at'
+require 'site_prism/all_there'
 
 Capybara.default_max_wait_time = 0
 

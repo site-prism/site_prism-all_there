@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './lib/site_prism_at/all_there/version'
+require './lib/site_prism/all_there/version'
 
 Gem::Specification.new do |s|
   s.name        = 'site_prism-all_there'

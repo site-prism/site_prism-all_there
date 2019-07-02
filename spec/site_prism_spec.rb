@@ -26,10 +26,10 @@ describe SitePrism do
   end
 
   describe '.recursion_setting=' do
-    it 'is alters the recursion_setting' do
-      SitePrism.recursion_setting = :one
+    it 'alters the recursion_setting' do
+      expect(SitePrism).to receive(:recursion_setting=).with(:one)
 
-      expect(SitePrism.recursion_setting).to eq(:one)
+      SitePrism.recursion_setting = :one
     end
   end
 end
