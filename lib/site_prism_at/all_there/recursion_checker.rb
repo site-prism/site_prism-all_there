@@ -2,6 +2,8 @@
 
 module SitePrism
   module AllThere
+    # Recurse through all of the objects found on an individual Page/Section
+    # Perform the all_there? check according to what recursion level is specified
     class RecursionChecker
       attr_reader :instance
       private :instance
@@ -10,6 +12,9 @@ module SitePrism
         @instance = instance
       end
 
+      # This is currently hard-coded to perform a recursion of depth :one
+      # It will be refactored to use either no input, :none, or :one as the
+      # regular repo uses currently
       def all_there?
         current_class_all_there? &&
           section_classes_all_there? &&

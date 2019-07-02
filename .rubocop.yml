@@ -1,5 +1,3 @@
-inherit_from: .rubocop_todo.yml
-
 require: rubocop-performance
 
 AllCops:
@@ -28,3 +26,9 @@ Style/TrailingCommaInHashLiteral:
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: comma
   Enabled: true
+
+# See: https://github.com/rubocop-hq/rubocop/issues/5953
+# Bug in the way rubocop uses this specific cop
+Style/AccessModifierDeclarations:
+  Enabled: false
+  

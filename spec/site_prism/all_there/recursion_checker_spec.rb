@@ -44,7 +44,7 @@ describe 'SitePrism::AllThere::RecursionChecker' do
             sections_classes_to_check: [
               [passing_section, passing_section],
               [passing_section, passing_section, passing_section],
-              [passing_section]
+              [passing_section],
             ]
           )
 
@@ -52,7 +52,7 @@ describe 'SitePrism::AllThere::RecursionChecker' do
         # items and the sections items
         expect(passing_page).to receive(:all_there?).with(recursion: :one) do
           passing_page.all_there? &&
-            passing_page.section_classes_to_check.all_there?
+            passing_page.section_classes_to_check.all_there? &&
             passing_page.sections_classes_to_check.all_there?
         end
 
@@ -73,7 +73,7 @@ describe 'SitePrism::AllThere::RecursionChecker' do
             sections_classes_to_check: [
               [passing_section, passing_section],
               [passing_section, failing_section, passing_section],
-              [passing_section]
+              [passing_section],
             ]
           )
 
@@ -81,8 +81,8 @@ describe 'SitePrism::AllThere::RecursionChecker' do
         # items and the sections items
         expect(passing_page).to receive(:all_there?).with(recursion: :one) do
           passing_page.all_there? &&
-            passing_page.section_classes_to_check.all_there?
-          passing_page.sections_classes_to_check.all_there?
+            passing_page.section_classes_to_check.all_there? &&
+            passing_page.sections_classes_to_check.all_there?
         end
 
         expect(passing_page.all_there?(recursion: :one)).to be false
