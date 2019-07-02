@@ -1,8 +1,5 @@
 # frozen_string_literal: true
 
-# require 'site_prism'
-# require 'site_prism_at'
-
 describe SitePrism do
   describe '.configure' do
     it 'can configure the `recursion_setting` in a configure block' do
@@ -12,13 +9,27 @@ describe SitePrism do
     end
 
     it 'yields the configured options' do
-      expect(SitePrism).to receive(:recursion_setting=).and_call_original
-      expect(SitePrism).to receive(:recursion_setting).and_call_original
+      expect(SitePrism).to receive(:recursion_setting=)
+      expect(SitePrism).to receive(:recursion_setting)
 
       SitePrism.configure do |config|
-        config.recursion_setting = :one
+        config.recursion_setting = :foo
         config.recursion_setting
       end
+    end
+  end
+
+  describe '.recursion_setting' do
+    subject { SitePrism.recursion_setting }
+
+    it { is_expected.to eq(:none) }
+  end
+
+  describe '.recursion_setting=' do
+    it 'is alters the recursion_setting' do
+      SitePrism.recursion_setting = :one
+
+      expect(SitePrism.recursion_setting).to eq(:one)
     end
   end
 end
