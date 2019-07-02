@@ -8,15 +8,14 @@ rvm:
   - 2.6
   - ruby-head
 
-env:
-  - browser=firefox
-
 gemfile:
   - Gemfile
 
-script:
+before_install:
   - gem uninstall bundler
   - gem install bundler -v '< 2'
+
+script:
   - bundle exec rake
 
 branches:
