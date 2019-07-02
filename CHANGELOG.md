@@ -11,6 +11,9 @@
 - Added mocked specs to test about 80% of the codebase
 ([luke-hill])
 
+- Added base usage docs in README
+([luke-hill])
+
 ### Changed
 - Altered the build pipeline for travis to run in under half the time (Removing unnecessary items)
 ([luke-hill])
