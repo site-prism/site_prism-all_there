@@ -5,6 +5,8 @@ require 'capybara'
 
 $LOAD_PATH << './lib'
 
+require 'site_prism_at'
+
 Capybara.default_max_wait_time = 0
 
 class MyTestApp

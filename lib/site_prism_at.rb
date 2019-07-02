@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module SitePrism
-  autoload :RecursionChecker, 'site_prism/all_there/recursion_checker'
+require 'site_prism_at/all_there/recursion_checker'
 
+module SitePrism
   class << self
     attr_writer :recursion_setting
 
