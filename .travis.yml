@@ -11,21 +11,16 @@ rvm:
   - ruby-head
 
 env:
-  - browser=chrome
   - browser=firefox
 
 gemfile:
   - Gemfile
 
 addons:
-  chrome: stable
   firefox: latest
 
 before_install:
   - gem install bundler -v '< 2'
-
-services:
-  - xvfb
 
 script:
   - bundle exec rake
@@ -33,3 +28,7 @@ script:
 branches:
   only:
     - master
+
+matrix:
+  allow_failures:
+    - rvm: ruby-head
