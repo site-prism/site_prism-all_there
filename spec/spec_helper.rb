@@ -1,9 +1,11 @@
 # frozen_string_literal: true
 
-#require 'site_prism'
+require 'site_prism'
 require 'capybara'
 
 $LOAD_PATH << './lib'
+
+require 'site_prism_at'
 
 Capybara.default_max_wait_time = 0
 
