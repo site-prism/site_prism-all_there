@@ -1,7 +1,5 @@
 language: ruby
-
 sudo: required
-
 dist: xenial
 
 rvm:
@@ -16,13 +14,9 @@ env:
 gemfile:
   - Gemfile
 
-addons:
-  firefox: latest
-
-before_install:
-  - gem install bundler -v '< 2'
-
 script:
+  - gem uninstall bundler
+  - gem install bundler -v '< 2'
   - bundle exec rake
 
 branches:

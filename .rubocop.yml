@@ -31,4 +31,3 @@ Style/TrailingCommaInArrayLiteral:
 # Bug in the way rubocop uses this specific cop
 Style/AccessModifierDeclarations:
   Enabled: false
-  
