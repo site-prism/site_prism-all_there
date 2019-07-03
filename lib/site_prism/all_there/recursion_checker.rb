@@ -12,8 +12,8 @@ module SitePrism
         @instance = instance
       end
 
-      # This is currently hard-coded to perform a recursion of depth :one
-      # It will be refactored to use either no input, :none, or :one as the
+      # This is currently hard-coded to perform a recursion of depth +:one+
+      # It will be refactored to use either no input, +:none+, or +:one+ as the
       # regular repo uses currently
       def all_there?
         current_class_all_there? &&
@@ -24,7 +24,7 @@ module SitePrism
       private
 
       # This will check all elements that are in the current scope
-      # This is equivalent to checking a recursion value of +:none+
+      # This is equivalent to checking with a recursion value of +:none+
       def current_class_all_there?
         expected_item_map.flatten.all? { |name| there?(name) }
       end
@@ -51,16 +51,16 @@ module SitePrism
 
       def expected_item_map
         [
-          expected(mapped_items, :element),
-          expected(mapped_items, :elements),
-          expected(mapped_items, :section),
-          expected(mapped_items, :sections),
-          expected(mapped_items, :iframe),
+          expected(:element),
+          expected(:elements),
+          expected(:section),
+          expected(:sections),
+          expected(:iframe),
         ]
       end
 
-      def expected(map, type)
-        map[type].select { |name| elements_to_check.include?(name) }
+      def expected(type)
+        MappedItems.new(instance).hash[type].select { |name| elements_to_check.include?(name) }
       end
 
       # If the page or section has expected_items set, return expected_items that are mapped
@@ -68,14 +68,12 @@ module SitePrism
       def elements_to_check
         if _expected_items
           SitePrism.logger.debug('Expected Items has been set.')
-          _mapped_items.select { |name| _expected_items.include?(name) }
+          MappedItems.new(instance).array.select do |name|
+            _expected_items.include?(name)
+          end
         else
-          _mapped_items
+          MappedItems.new(instance).array
         end
-      end
-
-      def _mapped_items
-        mapped_items.values.flatten.uniq
       end
 
       def _expected_items
@@ -84,10 +82,6 @@ module SitePrism
 
       def there?(name)
         instance.send("has_#{name}?")
-      end
-
-      def mapped_items
-        @mapped_items ||= instance.class.mapped_items(legacy: false)
       end
     end
   end
