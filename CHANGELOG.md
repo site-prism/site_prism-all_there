@@ -21,6 +21,9 @@
 - Use latest rubocop settings and fix up all cop offenses in suite
 ([luke-hill])
 
+- Refactored the code into a secondary class to try make error triaging easier
+([luke-hill])
+
 ### Fixed
 - Travis build now passes (ruby-head ignore issue)
 ([luke-hill])
