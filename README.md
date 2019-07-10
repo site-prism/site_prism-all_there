@@ -8,26 +8,22 @@ As such at the moment, the gem is very much considered a Work in Progress and wo
 
 It is fully expected to have a number of bug-fix / refactor PR's in between each minor release.
 
-In order to use this gem you simply need to do the following
+Add the following code to either `spec_helper.rb` or `env.rb`
 
 ```rb
-# In either spec_helper.rb or env.rb
-
 require 'site_prism/all_there
-
-# Then in either a config or initializer location (Or env.rb / spec_helper.rb)
 
 SitePrism.use_all_there_gem = true
 
-or ...
+# or...
 
 SitePrism.configure do |config|
   config.use_all_there_gem = true
 end
 ```
 
-v1.0 is slated for release some-time in the Autumn/Winter of 2019, with a variety of small interim
-releases being planned in the meantime.
+This gem is currently in the `0.x` phase, meaning it is API unstable and likely to change
+structure going forwards, to conform to the pairing of both gems.
 
 Happy Testing / Developing!
 

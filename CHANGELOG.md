@@ -1,4 +1,16 @@
 <!-- #4 - Jul 2nd - Last update to this document -->
+## [Unreleased]
+### Removed
+
+### Added
+
+### Changed
+
+### Fixed
+- The file locations / names of all files / test files to avoid namespace conflicts
+  - This in theory shouldn't have affected anyone as the code was unconsumed
+([luke-hill])
+
 ## [0.1.1] - 2019-07-03
 ### Removed
 - HACKING.md is now nice and concise, removed almost all the crud!
