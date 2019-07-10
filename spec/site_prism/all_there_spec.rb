@@ -2,7 +2,7 @@
 
 describe SitePrism do
   describe '.configure' do
-    it 'can configure the `recursion_setting` in a configure block' do
+    it 'allows the options to be configured in a block' do
       expect(SitePrism).to receive(:configure).once
 
       SitePrism.configure { |_| :foo }
@@ -20,9 +20,9 @@ describe SitePrism do
   end
 
   describe '.recursion_setting' do
-    subject { SitePrism.recursion_setting }
-
-    it { is_expected.to eq(:none) }
+    it 'shows the recursion_setting' do
+      expect(SitePrism.recursion_setting).to eq(:none)
+    end
   end
 
   describe '.recursion_setting=' do
