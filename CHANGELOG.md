@@ -3,7 +3,10 @@
 ### Removed
 
 ### Added
-
+- Global / runtime config option for `all_there?` can now be passed in
+  - At runtime pass in either `:none` or `:one` to recurse or not recurse
+  - A global config of `SitePrism.recursion_setting` can also be used (Same values)
+  
 ### Changed
 
 ### Fixed

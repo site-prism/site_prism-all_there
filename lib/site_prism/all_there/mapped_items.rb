@@ -3,6 +3,9 @@
 module SitePrism
   module AllThere
     # Returns the Mapped Items on a specific SitePrism object
+    #
+    # api private
+    #
     class MappedItems
       attr_reader :instance
       private :instance
