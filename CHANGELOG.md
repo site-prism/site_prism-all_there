@@ -1,13 +1,18 @@
-<!-- #4 - Jul 2nd - Last update to this document -->
+<!-- #6 - Jul 9th - Last update to this document -->
 ## [Unreleased]
 ### Removed
 
 ### Added
+  
+### Changed
+
+### Fixed
+
+## [0.2] - 2019-07-11
+### Added
 - Global / runtime config option for `all_there?` can now be passed in
   - At runtime pass in either `:none` or `:one` to recurse or not recurse
   - A global config of `SitePrism.recursion_setting` can also be used (Same values)
-  
-### Changed
 
 ### Fixed
 - The file locations / names of all files / test files to avoid namespace conflicts
@@ -49,7 +54,8 @@
 ([luke-hill])
 
 <!-- Releases -->
-[Unreleased]: https://github.com/site-prism/site_prism-all_there/compare/v0.1.1...master
+[Unreleased]: https://github.com/site-prism/site_prism-all_there/compare/v0.2...master
+[0.2]:        https://github.com/site-prism/site_prism-all_there/compare/v0.1.1...v0.2
 [0.1.1]:      https://github.com/site-prism/site_prism-all_there/compare/v0.1...v0.1.1
 [0.1]:        https://github.com/site-prism/site_prism-all_there/compare/a778bb...v0.1
 
