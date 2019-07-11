@@ -15,10 +15,14 @@ module SitePrism
       # This is currently hard-coded to perform a recursion of depth +:one+
       # It will be refactored to use either no input, +:none+, or +:one+ as the
       # regular repo uses currently
-      def all_there?
-        current_class_all_there? &&
-          section_classes_all_there? &&
-          sections_classes_all_there?
+      def all_there?(recursion: :one)
+        if recursion == :one || SitePrism.recursion_setting == :one
+          current_class_all_there? &&
+            section_classes_all_there? &&
+            sections_classes_all_there?
+        else
+          current_class_all_there?
+        end
       end
 
       private

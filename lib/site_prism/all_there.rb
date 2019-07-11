@@ -6,16 +6,12 @@ require 'site_prism/all_there/recursion_checker'
 # Configure the behaviour of the site_prism-all_there gem
 module SitePrism
   class << self
-    attr_writer :recursion_setting
+    # Configuration setting to use on a global scale
+    # Note this global setting can be overridden at runtime for each individual call
+    attr_accessor :recursion_setting
 
     def configure
       yield self
-    end
-
-    # Pass in a configuration setting to use on a global scale
-    # Note this can be overridden at runtime for each individual call
-    def recursion_setting
-      @recursion_setting ||= :none
     end
   end
 end
