@@ -7,12 +7,11 @@ module SitePrism
     # api private
     #
     class ExpectedItems
-      attr_reader :instance, :mapped_items
-      private :instance, :mapped_items
+      attr_reader :instance
+      private :instance
 
-      def initialize(instance, mapped_items)
+      def initialize(instance)
         @instance = instance
-        @mapped_items = mapped_items
       end
 
       def expected_item_map
@@ -44,6 +43,10 @@ module SitePrism
 
       def _expected_items
         instance.class.expected_items
+      end
+
+      def mapped_items
+        @mapped_items ||= MappedItems.new(instance)
       end
     end
   end
