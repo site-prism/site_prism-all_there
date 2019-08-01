@@ -54,34 +54,7 @@ module SitePrism
       end
 
       def expected_item_map
-        [
-          expected(:element),
-          expected(:elements),
-          expected(:section),
-          expected(:sections),
-          expected(:iframe),
-        ]
-      end
-
-      def expected(type)
-        MappedItems.new(instance).hash[type].select { |name| elements_to_check.include?(name) }
-      end
-
-      # If the page or section has expected_items set, return expected_items that are mapped
-      # otherwise just return the list of all mapped_items
-      def elements_to_check
-        if _expected_items
-          SitePrism.logger.debug('Expected Items has been set.')
-          MappedItems.new(instance).array.select do |name|
-            _expected_items.include?(name)
-          end
-        else
-          MappedItems.new(instance).array
-        end
-      end
-
-      def _expected_items
-        instance.class.expected_items
+        ExpectedItems.new(instance).array
       end
 
       def there?(name)

@@ -42,9 +42,9 @@ describe 'SitePrism::AllThere::RecursionChecker' do
           .to receive_messages(
             section_classes_to_check: passing_sections,
             sections_classes_to_check: [
-              [passing_section, passing_section],
-              [passing_section, passing_section, passing_section],
-              [passing_section],
+              passing_sections,
+              passing_sections,
+              passing_sections,
             ]
           )
 
@@ -71,9 +71,9 @@ describe 'SitePrism::AllThere::RecursionChecker' do
           .to receive_messages(
             section_classes_to_check: passing_sections,
             sections_classes_to_check: [
-              [passing_section, passing_section],
-              [passing_section, failing_section, passing_section],
-              [passing_section],
+              passing_sections,
+              failing_sections,
+              passing_sections,
             ]
           )
 
