@@ -14,34 +14,35 @@ module SitePrism
         @instance = instance
       end
 
-      def expected_item_map
+      def array
         [
-          expected(:element),
-          expected(:elements),
-          expected(:section),
-          expected(:sections),
-          expected(:iframe),
+          mapped_checklist_of(:element),
+          mapped_checklist_of(:elements),
+          mapped_checklist_of(:section),
+          mapped_checklist_of(:sections),
+          mapped_checklist_of(:iframe),
         ]
       end
 
       private
 
-      def expected(type)
-        mapped_items.hash[type].select { |name| elements_to_check.include?(name) }
+      def mapped_checklist_of(type)
+        mapped_items.hash[type].select { |name| mapped_checklist.include?(name) }
       end
 
       # If the page or section has expected_items set, return expected_items that are mapped
       # otherwise just return the list of all mapped_items
-      def elements_to_check
-        if _expected_items
+      def mapped_checklist
+        if checklist
           SitePrism.logger.debug('Expected Items has been set.')
-          mapped_items.array.select { |name| _expected_items.include?(name) }
+          mapped_items.array.select { |name| checklist.include?(name) }
         else
           mapped_items.array
         end
       end
 
-      def _expected_items
+      # List of expected_items as defined during build phase
+      def checklist
         instance.class.expected_items
       end
 

@@ -54,7 +54,7 @@ module SitePrism
       end
 
       def expected_item_map
-        ExpectedItems.new(instance).expected_item_map
+        ExpectedItems.new(instance).array
       end
 
       def there?(name)
