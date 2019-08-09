@@ -1,3 +1,5 @@
+inherit_from: .rubocop_todo.yml
+
 require:
   - rubocop-performance
   - rubocop-rspec
@@ -33,3 +35,7 @@ Style/TrailingCommaInArrayLiteral:
 # Bug in the way rubocop uses this specific cop
 Style/AccessModifierDeclarations:
   Enabled: false
+
+# Some tests have added value from showing 2 expectations
+RSpec/MultipleExpectations:
+  Max: 2
