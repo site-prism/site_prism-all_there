@@ -1,9 +1,11 @@
-<!-- #8 - Jul 11th - Last update to this document -->
 ## [Unreleased]
 ### Removed
 
 ### Added
-  
+- Added `rubocop-performance` and `rubocop-rspec` gems to development dependencies
+  - Upped existing `rubocop` requirement and fixed up all new offenses
+([luke-hill])
+
 ### Changed
 
 ### Fixed
