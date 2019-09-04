@@ -2,13 +2,20 @@
 ### Removed
 
 ### Added
-- Added `rubocop-performance` and `rubocop-rspec` gems to development dependencies
-  - Upped existing `rubocop` requirement and fixed up all new offenses
-([luke-hill])
 
 ### Changed
 
 ### Fixed
+
+## [0.3] - 2019-09-04
+### Added
+- Added `rubocop-performance` and `rubocop-rspec` gems to development dependencies
+  - Upped existing `rubocop` requirement and fixed up all new offenses
+([luke-hill])
+
+- Add all DSL items as callable methods on `ExpectedItems`
+  - Removes some magic numbers from areas of the codebase where specific elements "worked"
+([luke-hill])
 
 ## [0.2.1] - 2019-08-01
 ### Changed
@@ -63,7 +70,8 @@
 ([luke-hill])
 
 <!-- Releases -->
-[Unreleased]: https://github.com/site-prism/site_prism-all_there/compare/v0.2.1...master
+[Unreleased]: https://github.com/site-prism/site_prism-all_there/compare/v0.3...master
+[0.3]:      https://github.com/site-prism/site_prism-all_there/compare/v0.2.1...v0.3
 [0.2.1]:      https://github.com/site-prism/site_prism-all_there/compare/v0.2...v0.2.1
 [0.2]:        https://github.com/site-prism/site_prism-all_there/compare/v0.1.1...v0.2
 [0.1.1]:      https://github.com/site-prism/site_prism-all_there/compare/v0.1...v0.1.1
