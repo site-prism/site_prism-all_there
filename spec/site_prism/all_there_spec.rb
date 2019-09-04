@@ -3,16 +3,15 @@
 describe SitePrism do
   describe '.configure' do
     it 'allows the options to be configured in a block' do
-      expect(SitePrism).to receive(:configure).once
+      expect(described_class).to receive(:configure).once
 
-      SitePrism.configure { |_| :foo }
+      described_class.configure { |_| :foo }
     end
 
     it 'yields the configured options' do
-      expect(SitePrism).to receive(:recursion_setting=)
-      expect(SitePrism).to receive(:recursion_setting)
+      expect(described_class).to receive(:recursion_setting=)
 
-      SitePrism.configure do |config|
+      described_class.configure do |config|
         config.recursion_setting = :foo
         config.recursion_setting
       end
@@ -21,15 +20,15 @@ describe SitePrism do
 
   describe '.recursion_setting' do
     it 'shows the recursion_setting' do
-      expect(SitePrism.recursion_setting).to be nil
+      expect(described_class.recursion_setting).to be nil
     end
   end
 
   describe '.recursion_setting=' do
     it 'alters the recursion_setting' do
-      expect(SitePrism).to receive(:recursion_setting=).with(:one)
+      expect(described_class).to receive(:recursion_setting=).with(:one)
 
-      SitePrism.recursion_setting = :one
+      described_class.recursion_setting = :one
     end
   end
 end
