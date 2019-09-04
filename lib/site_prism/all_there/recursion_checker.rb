@@ -30,7 +30,7 @@ module SitePrism
       # This will check all elements that are in the current scope
       # This is equivalent to checking with a recursion value of +:none+
       def current_class_all_there?
-        expected_item_map.flatten.all? { |name| there?(name) }
+        expected_items.array.flatten.all? { |name| there?(name) }
       end
 
       # This will check all elements that are in any of the individual
@@ -46,15 +46,15 @@ module SitePrism
       end
 
       def section_classes_to_check
-        expected_item_map[2].map { |name| instance.send(name) }
+        expected_items.section.map { |name| instance.send(name) }
       end
 
       def sections_classes_to_check
-        expected_item_map[3].map { |name| instance.send(name) }
+        expected_items.sections.map { |name| instance.send(name) }
       end
 
-      def expected_item_map
-        ExpectedItems.new(instance).array
+      def expected_items
+        @expected_items ||= ExpectedItems.new(instance)
       end
 
       def there?(name)
