@@ -24,6 +24,26 @@ module SitePrism
         ]
       end
 
+      def element
+        mapped_checklist_of(:element)
+      end
+
+      def elements
+        mapped_checklist_of(:elements)
+      end
+
+      def section
+        mapped_checklist_of(:section)
+      end
+
+      def sections
+        mapped_checklist_of(:sections)
+      end
+
+      def iframe
+        mapped_checklist_of(:iframe)
+      end
+
       private
 
       def mapped_checklist_of(type)
