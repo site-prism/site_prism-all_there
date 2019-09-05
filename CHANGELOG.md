@@ -7,7 +7,7 @@
 
 ### Fixed
 
-## [0.3] - 2019-09-04
+## [0.3] - 2019-09-05
 ### Added
 - Added `rubocop-performance` and `rubocop-rspec` gems to development dependencies
   - Upped existing `rubocop` requirement and fixed up all new offenses
