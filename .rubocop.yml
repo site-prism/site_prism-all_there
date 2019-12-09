@@ -34,11 +34,6 @@ Style/TrailingCommaInArrayLiteral:
 Style/AccessModifierDeclarations:
   Enabled: false
 
-# RSpec style tweaks
-# Some tests have added value from showing 2 expectations
-RSpec/MultipleExpectations:
-  Max: 2
-
 # The format of this allows the specs to flow a bit better
 RSpec/MessageSpies:
   EnforcedStyle: receive
