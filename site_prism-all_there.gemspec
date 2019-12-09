@@ -28,4 +28,5 @@ page/section/element structures on your page - exclusively for use with the Site
   s.add_development_dependency 'rubocop-performance', ['~> 1.4']
   s.add_development_dependency 'rubocop-rspec', ['~> 1.33']
   s.add_development_dependency 'site_prism', ['~> 3.2']
+  s.add_development_dependency 'yard', ['~> 0.9']
 end

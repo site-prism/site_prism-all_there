@@ -2,10 +2,10 @@
 
 module SitePrism
   module AllThere
-    # Returns the Expected Item Map on a specific SitePrism object
     #
-    # api private
+    # @api private
     #
+    # The Expected Item Map on a SitePrism Page or Section
     class ExpectedItems
       attr_reader :instance
       private :instance

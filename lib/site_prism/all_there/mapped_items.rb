@@ -2,10 +2,10 @@
 
 module SitePrism
   module AllThere
-    # Returns the Mapped Items on a specific SitePrism object
     #
-    # api private
+    # @api private
     #
+    # The Mapped Items on a SitePrism Page or Section
     class MappedItems
       attr_reader :instance
       private :instance
@@ -14,11 +14,13 @@ module SitePrism
         @instance = instance
       end
 
+      # @return [Array<Symbol>]
       # All Mapped items on the SitePrism instance as a Symbol Array
       def array
         hash.values.flatten.uniq
       end
 
+      # @return [Hash<Symbol>]
       # All Mapped items on the SitePrism instance as a Symbol Hash
       def hash
         instance.class.mapped_items(legacy: false)
