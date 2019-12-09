@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+require 'site_prism/all_there/expected_items'
 require 'site_prism/all_there/mapped_items'
 require 'site_prism/all_there/recursion_checker'
 
