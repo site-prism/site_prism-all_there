@@ -7,6 +7,15 @@
 
 ### Fixed
 
+## [0.3.1] - 2019-12-09
+### Changed
+- Bumped internal rubocop dev requirement from `0.73` to `0.75`
+([luke-hill])
+
+### Fixed
+- Fixed an issue where a subclass (`ExpectedItems`) wasn't added to the `require` chain
+([luke-hill])
+
 ## [0.3] - 2019-09-05
 ### Added
 - Added `rubocop-performance` and `rubocop-rspec` gems to development dependencies
@@ -70,8 +79,9 @@
 ([luke-hill])
 
 <!-- Releases -->
-[Unreleased]: https://github.com/site-prism/site_prism-all_there/compare/v0.3...master
-[0.3]:      https://github.com/site-prism/site_prism-all_there/compare/v0.2.1...v0.3
+[Unreleased]: https://github.com/site-prism/site_prism-all_there/compare/v0.3.1...master
+[0.3.1]:      https://github.com/site-prism/site_prism-all_there/compare/v0.3...v0.3.1
+[0.3]:        https://github.com/site-prism/site_prism-all_there/compare/v0.2.1...v0.3
 [0.2.1]:      https://github.com/site-prism/site_prism-all_there/compare/v0.2...v0.2.1
 [0.2]:        https://github.com/site-prism/site_prism-all_there/compare/v0.1.1...v0.2
 [0.1.1]:      https://github.com/site-prism/site_prism-all_there/compare/v0.1...v0.1.1
