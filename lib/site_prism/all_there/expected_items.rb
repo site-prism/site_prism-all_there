@@ -18,11 +18,11 @@ module SitePrism
       # All Mapped and Expected Items
       def array
         [
-          mapped_checklist_of(:element),
-          mapped_checklist_of(:elements),
-          mapped_checklist_of(:section),
-          mapped_checklist_of(:sections),
-          mapped_checklist_of(:iframe),
+          element,
+          elements,
+          section,
+          sections,
+          iframe,
         ]
       end
 

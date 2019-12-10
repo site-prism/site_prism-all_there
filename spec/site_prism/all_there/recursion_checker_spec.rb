@@ -59,7 +59,7 @@ describe SitePrism::AllThere::RecursionChecker do
         expect(passing_page.all_there?(recursion: :one)).to be true
       end
 
-      it 'performs checks on both the current page, as well as all descendant section/s' do
+      it 'performs checks on the current page and all descendant section/s' do
         mock_page_as :passing
 
         expect(passing_page).to receive(:all_there?).with(recursion: :one) do
