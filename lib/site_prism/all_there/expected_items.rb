@@ -2,10 +2,10 @@
 
 module SitePrism
   module AllThere
-    # Returns the Expected Item Map on a specific SitePrism object
     #
-    # api private
+    # @api private
     #
+    # The Expected Item Map on a SitePrism Page or Section
     class ExpectedItems
       attr_reader :instance
       private :instance
@@ -14,32 +14,44 @@ module SitePrism
         @instance = instance
       end
 
+      # @return [Array<Hash<Symbol>>]
+      # All Mapped and Expected Items
       def array
         [
-          mapped_checklist_of(:element),
-          mapped_checklist_of(:elements),
-          mapped_checklist_of(:section),
-          mapped_checklist_of(:sections),
-          mapped_checklist_of(:iframe),
+          element,
+          elements,
+          section,
+          sections,
+          iframe,
         ]
       end
 
+      # @return [Hash<Symbol>]
+      # All Mapped and Expected Items that are +element+
       def element
         mapped_checklist_of(:element)
       end
 
+      # @return [Hash<Symbol>]
+      # All Mapped and Expected Items that are +elements+
       def elements
         mapped_checklist_of(:elements)
       end
 
+      # @return [Hash<Symbol>]
+      # All Mapped and Expected Items that are +section+
       def section
         mapped_checklist_of(:section)
       end
 
+      # @return [Hash<Symbol>]
+      # All Mapped and Expected Items that are +sections+
       def sections
         mapped_checklist_of(:sections)
       end
 
+      # @return [Hash<Symbol>]
+      # All Mapped and Expected Items that are +iframe+
       def iframe
         mapped_checklist_of(:iframe)
       end

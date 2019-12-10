@@ -12,6 +12,7 @@ module SitePrism
         @instance = instance
       end
 
+      # @return [Boolean]
       # This is currently hard-coded to perform a recursion of depth +:one+
       # It will be refactored to use either no input, +:none+, or +:one+ as the
       # regular repo uses currently
@@ -27,20 +28,20 @@ module SitePrism
 
       private
 
-      # This will check all elements that are in the current scope
-      # This is equivalent to checking with a recursion value of +:none+
+      # @return [Boolean]
+      # Are all SitePrism objects that exist in +self+ present?
       def current_class_all_there?
         expected_items.array.flatten.all? { |name| there?(name) }
       end
 
-      # This will check all elements that are in any of the individual
-      # +section+ items defined in the current scope
+      # @return [Boolean]
+      # Are all SitePrism objects that exist in all +self.section+ items present?
       def section_classes_all_there?
         section_classes_to_check.all?(&:all_there?)
       end
 
-      # This will check all elements that are in any instance of any of the
-      # +sections+ items defined in the current scope
+      # @return [Boolean]
+      # Are all SitePrism objects that exist in all +self.sections+ items present?
       def sections_classes_all_there?
         sections_classes_to_check.flatten.all?(&:all_there?)
       end
