@@ -8,15 +8,14 @@ $ cd site_prism-all_there
 $ bundle
 ```
 
-The only hacking commands you will need is ...
+Write your code. Make sure to add unit tests **AND** documentation
 
 ```bash
-$ bundle exec rake # Run all rspec tests, then run rubocop
+# Run all rspec tests, then run rubocop. Make sure it all passes
+$ bundle exec rake
 ```
 
-- Write your code. Make sure to add unit tests AND documentation
-- Run `bundle exec rake` and ensure it passes
-- Submit a pull request
+Submit your pull request to the repo
 
 Happy Testing / Developing!
 

@@ -15,7 +15,7 @@ module SitePrism
       end
 
       # @return [Array<Hash<Symbol>>]
-      # All Mapped and Expected Items
+      # All expected mapped items
       def array
         [
           element,
@@ -27,31 +27,31 @@ module SitePrism
       end
 
       # @return [Hash<Symbol>]
-      # All Mapped and Expected Items that are +element+
+      # All expected items that were mapped as +element+
       def element
         mapped_checklist_of(:element)
       end
 
       # @return [Hash<Symbol>]
-      # All Mapped and Expected Items that are +elements+
+      # All expected items that were mapped as +elements+
       def elements
         mapped_checklist_of(:elements)
       end
 
       # @return [Hash<Symbol>]
-      # All Mapped and Expected Items that are +section+
+      # All expected items that were mapped as +section+
       def section
         mapped_checklist_of(:section)
       end
 
       # @return [Hash<Symbol>]
-      # All Mapped and Expected Items that are +sections+
+      # All expected items that were mapped as +sections+
       def sections
         mapped_checklist_of(:sections)
       end
 
       # @return [Hash<Symbol>]
-      # All Mapped and Expected Items that are +iframe+
+      # All expected items that were mapped as +iframe+
       def iframe
         mapped_checklist_of(:iframe)
       end
@@ -62,8 +62,6 @@ module SitePrism
         mapped_items.hash[type].select { |name| mapped_checklist.include?(name) }
       end
 
-      # If the page or section has expected_items set, return expected_items that are mapped
-      # otherwise just return the list of all mapped_items
       def mapped_checklist
         if checklist
           SitePrism.logger.debug('Expected Items has been set.')
@@ -73,7 +71,6 @@ module SitePrism
         end
       end
 
-      # List of expected_items as defined during build phase
       def checklist
         instance.class.expected_items
       end

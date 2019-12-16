@@ -15,13 +15,13 @@ module SitePrism
       end
 
       # @return [Array<Symbol>]
-      # All Mapped items on the SitePrism instance as a Symbol Array
+      # All expected mapped items on the SitePrism instance as a Symbol Array
       def array
         hash.values.flatten.uniq
       end
 
       # @return [Hash<Symbol>]
-      # All Mapped items on the SitePrism instance as a Symbol Hash
+      # All expected mapped items on the SitePrism instance as a Symbol Hash
       def hash
         instance.class.mapped_items(legacy: false)
       end

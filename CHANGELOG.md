@@ -7,13 +7,25 @@
 
 ### Fixed
 
+## [0.3.2] - 2019-12-16
+### Added
+- Full `yard` documentation coverage of entire gem
+([luke-hill])
+
+### Changed
+- Altered rspec tests to only make 1 assertion per test
+([luke-hill])
+
+- DRYed up the `ExpectedItems` class to only have the public `array` method call the other defined methods
+([luke-hill])
+
 ## [0.3.1] - 2019-12-09
 ### Changed
 - Bumped internal rubocop dev requirement from `0.73` to `0.75`
 ([luke-hill])
 
 ### Fixed
-- Fixed an issue where a subclass (`ExpectedItems`) wasn't added to the `require` chain
+- Fixed an issue where `ExpectedItems` wasn't added to the gems load path
 ([luke-hill])
 
 ## [0.3] - 2019-09-05
@@ -79,7 +91,8 @@
 ([luke-hill])
 
 <!-- Releases -->
-[Unreleased]: https://github.com/site-prism/site_prism-all_there/compare/v0.3.1...master
+[Unreleased]: https://github.com/site-prism/site_prism-all_there/compare/v0.3.2...master
+[0.3.2]:      https://github.com/site-prism/site_prism-all_there/compare/v0.3.1...v0.3.2
 [0.3.1]:      https://github.com/site-prism/site_prism-all_there/compare/v0.3...v0.3.1
 [0.3]:        https://github.com/site-prism/site_prism-all_there/compare/v0.2.1...v0.3
 [0.2.1]:      https://github.com/site-prism/site_prism-all_there/compare/v0.2...v0.2.1
