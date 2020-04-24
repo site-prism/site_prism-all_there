@@ -16,7 +16,7 @@ Style/RegexpLiteral:
   EnforcedStyle: slashes
   AllowInnerSlashes: true
 
-BlockLength:
+Metrics/BlockLength:
   Exclude:
     - './spec/**/*_spec.rb'
     - 'site_prism.gemspec'

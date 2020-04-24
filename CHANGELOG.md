@@ -25,7 +25,7 @@
 ([luke-hill])
 
 ### Fixed
-- Fixed an issue where `ExpectedItems` wasn't added to the gems load path
+- Fixed an issue where `ExpectedItems` wasn't added to the gems load path ([#12])
 ([luke-hill])
 
 ## [0.3] - 2019-09-05
@@ -101,4 +101,7 @@
 [0.1]:        https://github.com/site-prism/site_prism-all_there/compare/a778bb...v0.1
 
 <!-- Contributors in chronological order -->
-[luke-hill]:      https://github.com/luke-hill
+[luke-hill]:  https://github.com/luke-hill
+
+<!-- Issue References to the repo -->
+[#12]:        https://github.com/site-prism/site_prism-all_there/issues/12
