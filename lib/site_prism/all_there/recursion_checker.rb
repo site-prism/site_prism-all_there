@@ -13,7 +13,7 @@ module SitePrism
       end
 
       # @return [Boolean]
-      # This is currently hard-coded to perform a recursion of depth +:one+
+      # This currently defaults to perform a recursion of depth +:one+
       # It will be refactored to use either no input, +:none+, or +:one+ as the
       # regular repo uses currently
       def all_there?(recursion: :one)
