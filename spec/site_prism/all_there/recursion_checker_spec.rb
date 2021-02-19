@@ -8,6 +8,13 @@ describe SitePrism::AllThere::RecursionChecker do
   let(:passing_sections) { [passing_section, passing_section] }
   let(:failing_sections) { [passing_section, failing_section] }
   let(:section_there?) { passing_page.section_classes_to_check.all?(&:all_there?) }
+  let(:page) { described_class.new(passing_page) }
+
+  before do
+    allow(page).to receive(:current_class_all_there?).and_return(true)
+    allow(page).to receive(:section_classes_all_there?).and_return(true)
+    allow(page).to receive(:sections_classes_all_there?).and_return(true)
+  end
 
   describe '#all_there?' do
     context 'with recursion not set' do
@@ -29,6 +36,12 @@ describe SitePrism::AllThere::RecursionChecker do
         expect(passing_page).not_to receive(:sections_classes_all_there?)
 
         passing_page.all_there?
+      end
+
+      it 'will check the value of SitePrism.recursion_setting' do
+        expect(SitePrism).to receive(:recursion_setting)
+
+        page.all_there?(recursion: double)
       end
     end
 
@@ -57,7 +70,6 @@ describe SitePrism::AllThere::RecursionChecker do
     context 'with recursion set to :one' do
       let(:page_there?) { passing_page.all_there? }
       let(:sections_there?) { passing_page.sections_classes_to_check.flatten.all?(&:all_there?) }
-      let(:page) { described_class.new(passing_page) }
 
       before do
         # Set the `all_there?` check to be the legit one that recurses
