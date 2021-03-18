@@ -4,7 +4,9 @@
 ### Added
 
 ### Changed
-
+- Massively bumped internal dev requirements
+  ([luke-hill])
+  
 ### Fixed
 
 ## [0.3.2] - 2019-12-16
