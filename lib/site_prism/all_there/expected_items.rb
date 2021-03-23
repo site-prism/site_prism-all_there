@@ -5,7 +5,7 @@ module SitePrism
     #
     # @api private
     #
-    # The Expected Item Map on a SitePrism Page or Section
+    # The Expected Items to be present on a SitePrism Page or Section
     class ExpectedItems
       attr_reader :instance
       private :instance
