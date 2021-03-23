@@ -4,8 +4,14 @@
 ### Added
 
 ### Changed
+- Massively bumped internal dev requirements
+  ([luke-hill])
+
+- **Required Ruby Version is now 2.5+** ([#20])
+  ([luke-hill])
 
 ### Fixed
+- Fixed up some tests which weren't running against the correct code-path ([#20])
 
 ## [0.3.2] - 2019-12-16
 ### Added
@@ -103,5 +109,6 @@
 <!-- Contributors in chronological order -->
 [luke-hill]:  https://github.com/luke-hill
 
-<!-- Issue References to the repo -->
+<!-- Issue/PR References to the repo -->
+[#20]:        https://github.com/site-prism/site_prism-all_there/pull/20
 [#12]:        https://github.com/site-prism/site_prism-all_there/issues/12
