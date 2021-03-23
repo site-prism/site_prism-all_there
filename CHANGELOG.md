@@ -97,7 +97,7 @@
 ([luke-hill])
 
 <!-- Releases -->
-[Unreleased]: https://github.com/site-prism/site_prism-all_there/compare/v0.3.2...master
+[Unreleased]: https://github.com/site-prism/site_prism-all_there/compare/v0.3.2...main
 [0.3.2]:      https://github.com/site-prism/site_prism-all_there/compare/v0.3.1...v0.3.2
 [0.3.1]:      https://github.com/site-prism/site_prism-all_there/compare/v0.3...v0.3.1
 [0.3]:        https://github.com/site-prism/site_prism-all_there/compare/v0.2.1...v0.3
