@@ -4,6 +4,11 @@
 ### Added
 
 ### Changed
+
+### Fixed
+
+## [1.0]
+### Changed
 - Massively bumped internal dev requirements
   ([luke-hill])
 
@@ -97,7 +102,8 @@
 ([luke-hill])
 
 <!-- Releases -->
-[Unreleased]: https://github.com/site-prism/site_prism-all_there/compare/v0.3.2...main
+[Unreleased]: https://github.com/site-prism/site_prism-all_there/compare/v1.0...main
+[1.0]:        https://github.com/site-prism/site_prism-all_there/compare/v0.3.2...v1.0
 [0.3.2]:      https://github.com/site-prism/site_prism-all_there/compare/v0.3.1...v0.3.2
 [0.3.1]:      https://github.com/site-prism/site_prism-all_there/compare/v0.3...v0.3.1
 [0.3]:        https://github.com/site-prism/site_prism-all_there/compare/v0.2.1...v0.3
