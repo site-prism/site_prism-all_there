@@ -6,7 +6,10 @@
 ### Changed
 - Massively bumped internal dev requirements
   ([luke-hill])
-  
+
+- **Required Ruby Version is now 2.5+** ([#20])
+  ([luke-hill])
+
 ### Fixed
 - Fixed up some tests which weren't running against the correct code-path ([#20])
 
