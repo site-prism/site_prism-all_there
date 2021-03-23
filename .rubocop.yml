@@ -1,5 +1,3 @@
-inherit_from: .rubocop_todo.yml
-
 require:
   - rubocop-performance
   - rubocop-rspec
@@ -23,6 +21,10 @@ Metrics/BlockLength:
   Exclude:
     - './spec/**/*_spec.rb'
     - 'site_prism.gemspec'
+
+RSpec/ContextWording:
+  Exclude:
+    - 'spec/support/shared_context/**.rb'
 
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
