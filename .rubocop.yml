@@ -7,17 +7,12 @@ AllCops:
   NewCops: enable
 
 # Allow a longer linelength in SitePrism and ignore Gherkin definitions
-Metrics/LineLength:
+Layout/LineLength:
   Max: 100
   IgnoredPatterns:
     - '^Given'
     - '^When'
     - '^Then'
-
-# This is a "better" style used in the codebase
-Style/RegexpLiteral:
-  EnforcedStyle: slashes
-  AllowInnerSlashes: true
 
 # These two will always break the metric. Should be added to rubocop-rspec
 Metrics/BlockLength:
@@ -30,21 +25,26 @@ RSpec/ContextWording:
   Exclude:
     - 'spec/support/shared_context/**.rb'
 
-# This is a style used in the codebase to reduce diff deltas
-Style/TrailingCommaInHashLiteral:
-  EnforcedStyleForMultiline: comma
-  Enabled: true
-
-# This is a style used in the codebase to reduce diff deltas
-Style/TrailingCommaInArrayLiteral:
-  EnforcedStyleForMultiline: comma
-  Enabled: true
+# The format of this allows the specs to flow a bit better
+RSpec/MessageSpies:
+  EnforcedStyle: receive
 
 # See: https://github.com/rubocop-hq/rubocop/issues/5953
 # Bug in the way rubocop uses this specific cop
 Style/AccessModifierDeclarations:
   Enabled: false
 
-# The format of this allows the specs to flow a bit better
-RSpec/MessageSpies:
-  EnforcedStyle: receive
+# This is a "better" style used in the codebase
+Style/RegexpLiteral:
+  EnforcedStyle: slashes
+  AllowInnerSlashes: true
+
+# This is a style used in the codebase to reduce diff deltas
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+  Enabled: true
+
+# This is a style used in the codebase to reduce diff deltas
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
+  Enabled: true
