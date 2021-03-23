@@ -24,9 +24,9 @@ page/section/element structures on your page - exclusively for use with the Site
 
   s.add_development_dependency 'rake', ['~> 13.0']
   s.add_development_dependency 'rspec', ['~> 3.10']
-  s.add_development_dependency 'rubocop', ['~> 0.93.0']
+  s.add_development_dependency 'rubocop', ['~> 1.0.0']
   s.add_development_dependency 'rubocop-performance', ['~> 1.10.2']
-  s.add_development_dependency 'rubocop-rspec', ['~> 1.44.0']
+  s.add_development_dependency 'rubocop-rspec', ['~> 2.0.0']
   s.add_development_dependency 'site_prism', ['~> 3.7']
   s.add_development_dependency 'yard', ['~> 0.9']
 end
