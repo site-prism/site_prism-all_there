@@ -3,11 +3,6 @@
 describe SitePrism::AllThere::RecursionChecker do
   let(:passing_page) { instance_double('SitePrism::Page', 'Passing', all_there?: true) }
   let(:failing_page) { instance_double('SitePrism::Page', 'Failing', all_there?: false) }
-  let(:passing_section) { instance_double('SitePrism::Section', 'Passing', all_there?: true) }
-  let(:failing_section) { instance_double('SitePrism::Section', 'Failing', all_there?: false) }
-  let(:passing_sections) { [passing_section, passing_section] }
-  let(:failing_sections) { [passing_section, failing_section] }
-  let(:section_there?) { passing_page.section_classes_to_check.all?(&:all_there?) }
   let(:page) { described_class.new(passing_page) }
 
   before do
@@ -70,16 +65,17 @@ describe SitePrism::AllThere::RecursionChecker do
     context 'with recursion set to :one' do
       let(:page_there?) { passing_page.all_there? }
       let(:sections_there?) { passing_page.sections_classes_to_check.flatten.all?(&:all_there?) }
+      let(:section_there?) { passing_page.section_classes_to_check.all?(&:all_there?) }
+      let(:passing_section) { instance_double('SitePrism::Section', 'Passing', all_there?: true) }
+      let(:failing_section) { instance_double('SitePrism::Section', 'Failing', all_there?: false) }
+      let(:passing_sections) { [passing_section, passing_section] }
+      let(:failing_sections) { [passing_section, failing_section] }
 
       before do
         # Set the `all_there?` check to be the legit one that recurses
         allow(passing_page).to receive(:all_there?).with(recursion: :one) do
           page_there? && section_there? && sections_there?
         end
-
-        allow(page).to receive(:current_class_all_there?).and_return(true)
-        allow(page).to receive(:section_classes_all_there?).and_return(true)
-        allow(page).to receive(:sections_classes_all_there?).and_return(true)
       end
 
       it 'returns `true` for pages that have every item and descendant item present' do

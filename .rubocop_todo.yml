@@ -8,5 +8,5 @@
 
 # Offense count: 5
 # Configuration parameters: AllowSubject.
-RSpec/MultipleMemoizedHelpers:
-  Max: 10
+#RSpec/MultipleMemoizedHelpers:
+#  Max: 10
