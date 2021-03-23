@@ -6,6 +6,7 @@ AllCops:
   TargetRubyVersion: 2.5
   NewCops: enable
 
+# Allow a longer linelength in SitePrism and ignore Gherkin definitions
 Metrics/LineLength:
   Max: 100
   IgnoredPatterns:
@@ -13,23 +14,28 @@ Metrics/LineLength:
     - '^When'
     - '^Then'
 
+# This is a "better" style used in the codebase
 Style/RegexpLiteral:
   EnforcedStyle: slashes
   AllowInnerSlashes: true
 
+# These two will always break the metric. Should be added to rubocop-rspec
 Metrics/BlockLength:
   Exclude:
     - './spec/**/*_spec.rb'
     - 'site_prism.gemspec'
 
+# This rule isn't valid for shared contexts
 RSpec/ContextWording:
   Exclude:
     - 'spec/support/shared_context/**.rb'
 
+# This is a style used in the codebase to reduce diff deltas
 Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
   Enabled: true
 
+# This is a style used in the codebase to reduce diff deltas
 Style/TrailingCommaInArrayLiteral:
   EnforcedStyleForMultiline: comma
   Enabled: true
