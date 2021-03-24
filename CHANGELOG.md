@@ -4,6 +4,15 @@
 ### Added
 
 ### Changed
+
+### Fixed
+
+## [1.0] - 2021-03-??
+### Added
+- Basic debugging for each type of `all_there?` check ([#21])
+([luke-hill])
+  
+### Changed
 - Massively bumped internal dev requirements
   ([luke-hill])
 
@@ -97,7 +106,8 @@
 ([luke-hill])
 
 <!-- Releases -->
-[Unreleased]: https://github.com/site-prism/site_prism-all_there/compare/v0.3.2...master
+[Unreleased]: https://github.com/site-prism/site_prism-all_there/compare/v1.0...main
+[1.0]:        https://github.com/site-prism/site_prism-all_there/compare/v0.3.2...v1.0
 [0.3.2]:      https://github.com/site-prism/site_prism-all_there/compare/v0.3.1...v0.3.2
 [0.3.1]:      https://github.com/site-prism/site_prism-all_there/compare/v0.3...v0.3.1
 [0.3]:        https://github.com/site-prism/site_prism-all_there/compare/v0.2.1...v0.3
@@ -110,5 +120,6 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
+[#21]:        https://github.com/site-prism/site_prism-all_there/pull/21
 [#20]:        https://github.com/site-prism/site_prism-all_there/pull/20
 [#12]:        https://github.com/site-prism/site_prism-all_there/issues/12

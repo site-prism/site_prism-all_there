@@ -5,7 +5,7 @@ module SitePrism
     #
     # @api private
     #
-    # The Mapped Items on a SitePrism Page or Section
+    # The Expected Items on a SitePrism Page or Section structured in an enumerable way
     class MappedItems
       attr_reader :instance
       private :instance

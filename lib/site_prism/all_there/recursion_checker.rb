@@ -31,19 +31,25 @@ module SitePrism
       # @return [Boolean]
       # Are all SitePrism objects that exist in +self+ present?
       def current_class_all_there?
-        expected_items.array.flatten.all? { |name| there?(name) }
+        expected_items.array.flatten.all? { |name| there?(name) }.tap do |result|
+          SitePrism.logger.info("Result of current_class_all_there?: #{result}")
+        end
       end
 
       # @return [Boolean]
       # Are all SitePrism objects that exist in all +self.section+ items present?
       def section_classes_all_there?
-        section_classes_to_check.all?(&:all_there?)
+        section_classes_to_check.all?(&:all_there?).tap do |result|
+          SitePrism.logger.debug("Result of section_classes_all_there?: #{result}")
+        end
       end
 
       # @return [Boolean]
       # Are all SitePrism objects that exist in all +self.sections+ items present?
       def sections_classes_all_there?
-        sections_classes_to_check.flatten.all?(&:all_there?)
+        sections_classes_to_check.flatten.all?(&:all_there?).tap do |result|
+          SitePrism.logger.debug("Result of section_classes_all_there?: #{result}")
+        end
       end
 
       def section_classes_to_check
