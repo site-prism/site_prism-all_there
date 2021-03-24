@@ -32,7 +32,7 @@ module SitePrism
       # Are all SitePrism objects that exist in +self+ present?
       def current_class_all_there?
         expected_items.array.flatten.all? { |name| there?(name) }.tap do |result|
-          SitePrism.logger.debug("Result of current_class_all_there?: #{result}")
+          SitePrism.logger.info("Result of current_class_all_there?: #{result}")
         end
       end
 

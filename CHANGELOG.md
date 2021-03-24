@@ -7,7 +7,11 @@
 
 ### Fixed
 
-## [1.0]
+## [1.0] - 2021-03-??
+### Added
+- Basic debugging for each type of `all_there?` check ([#21])
+([luke-hill])
+  
 ### Changed
 - Massively bumped internal dev requirements
   ([luke-hill])
@@ -116,5 +120,6 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
+[#21]:        https://github.com/site-prism/site_prism-all_there/pull/21
 [#20]:        https://github.com/site-prism/site_prism-all_there/pull/20
 [#12]:        https://github.com/site-prism/site_prism-all_there/issues/12
