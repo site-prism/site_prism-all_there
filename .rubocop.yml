@@ -10,20 +10,26 @@ AllCops:
 Layout/LineLength:
   Max: 100
   IgnoredPatterns:
-    - '^Given'
-    - '^When'
-    - '^Then'
+    - ^Given
+    - ^When
+    - ^Then
 
 # These two will always break the metric. Should be added to rubocop-rspec
 Metrics/BlockLength:
   Exclude:
-    - './spec/**/*_spec.rb'
-    - 'site_prism.gemspec'
+    - ./spec/**/*_spec.rb
+    - site_prism.gemspec
 
 # This rule isn't valid for shared contexts
 RSpec/ContextWording:
   Exclude:
-    - 'spec/support/shared_context/**.rb'
+    - spec/support/shared_context/**.rb
+
+# This file is in a diff namespace for both lib and spec
+# This is because otherwise we would get a name conflict
+RSpec/FilePath:
+  Exclude:
+    - spec/site_prism/all_there_spec.rb
 
 # The format of this allows the specs to flow a bit better
 RSpec/MessageSpies:
