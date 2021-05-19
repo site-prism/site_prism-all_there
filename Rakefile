@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
-task :specs do
-  system('bundle exec rspec') || raise('Specs failed')
-end
+require 'rspec/core/rake_task'
+require 'rubocop/rake_task'
 
-task :cops do
-  system('bundle exec rubocop') || raise('Cops failed')
-end
+RuboCop::RakeTask.new(:rubocop)
+RSpec::Core::RakeTask.new(:rspec)
 
-task default: %i[specs cops]
+task default: %i[rspec rubocop]

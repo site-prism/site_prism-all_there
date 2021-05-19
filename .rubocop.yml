@@ -19,7 +19,7 @@ Layout/LineLength:
 Metrics/BlockLength:
   Exclude:
     - ./spec/**/*_spec.rb
-    - site_prism.gemspec
+    - site_prism-all_there.gemspec
 
 # This rule isn't valid for shared contexts
 RSpec/ContextWording:
