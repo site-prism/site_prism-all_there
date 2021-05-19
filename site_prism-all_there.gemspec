@@ -17,8 +17,7 @@ Gem::Specification.new do |s|
     'source_code_uri' => 'https://github.com/site-prism/site_prism-all_there',
   }
   s.summary     = 'An extension to allow you to recurse through your SitePrism Pages/Sections'
-  s.description = 'SitePrism AllThere gives you a simple DSL in order to recursively query,
-page/section/element structures on your page - exclusively for use with the SitePrism gem.'
+  s.description = 'SitePrism AllThere gives you a simple DSL in order to recursively query SitePrism objects on your page.'
   s.files        = Dir.glob('lib/**/*') + %w[LICENSE.md README.md]
   s.require_path = 'lib'
 
@@ -26,6 +25,7 @@ page/section/element structures on your page - exclusively for use with the Site
   s.add_development_dependency 'rspec', ['~> 3.10']
   s.add_development_dependency 'rubocop', ['~> 1.11.0']
   s.add_development_dependency 'rubocop-performance', ['~> 1.11.0']
+  s.add_development_dependency 'rubocop-rake', ['~> 0.5.0']
   s.add_development_dependency 'rubocop-rspec', ['~> 2.3.0']
   s.add_development_dependency 'site_prism', ['~> 3.7']
   s.add_development_dependency 'yard', ['~> 0.9']
