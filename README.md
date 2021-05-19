@@ -5,7 +5,8 @@ The breakout gem from SitePrism to perform recursion checks for `#all_there?`
 This gem is a breakout of the current `SitePrism::Page#all_there?` and `SitePrism::Section#all_there?`
 methods which already exist.
 
-At the moment, the gem is currently released as a `0.x` version meaning it is **not** fully API stable.
+The gem is currently released as `1.0` meaning it is version stable. A full `site_prism` release that permits
+the usage of this will be coming shortly!
 
 ## Usage
 
