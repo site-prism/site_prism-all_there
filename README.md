@@ -3,10 +3,10 @@
 The breakout gem from SitePrism to perform recursion checks for `#all_there?`
 
 This gem is a breakout of the current `SitePrism::Page#all_there?` and `SitePrism::Section#all_there?`
-methods which already exist.
+methods which already exist in the core gem proper.
 
-The gem is currently released as `1.0` meaning it is version stable. A full `site_prism` release that permits
-the usage of this will be coming shortly!
+The gem is currently released as `1.0` meaning it is version stable. It will be added as default
+functionality in `site_prism` version 4. Which is slated for release early 2022!
 
 ## Usage
 
@@ -23,8 +23,6 @@ SitePrism.configure do |config|
   config.use_all_there_gem = true
 end
 ```
-
-This gem is likely to change structure going forwards, to conform to the pairing of both gems, expected in 2020.
 
 Happy Testing / Developing!
 
