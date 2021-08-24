@@ -8,6 +8,9 @@
   ([luke-hill])
 
 ### Fixed
+- Guarded against the internal checklist throwing a NME if trying to fetch a DSL type that wasn't
+  in existence (In theory shouldn't be possible) ([#24])
+  ([luke-hill])
 
 ## [1.0] - 2021-03-29
 ### Added
@@ -122,6 +125,7 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
+[#24]:        https://github.com/site-prism/site_prism-all_there/pull/24
 [#23]:        https://github.com/site-prism/site_prism-all_there/pull/23
 [#22]:        https://github.com/site-prism/site_prism-all_there/pull/22
 [#21]:        https://github.com/site-prism/site_prism-all_there/pull/21
