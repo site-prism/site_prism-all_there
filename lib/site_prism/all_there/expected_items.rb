@@ -14,7 +14,7 @@ module SitePrism
         @instance = instance
       end
 
-      # @return [Array<Hash<Symbol>>]
+      # @return [Array<Array<Symbol>>]
       # All expected mapped items
       def array
         [
@@ -26,31 +26,31 @@ module SitePrism
         ]
       end
 
-      # @return [Hash<Symbol>]
+      # @return [Array<Symbol>]
       # All expected items that were mapped as +element+
       def element
         mapped_checklist_of(:element)
       end
 
-      # @return [Hash<Symbol>]
+      # @return [Array<Symbol>]
       # All expected items that were mapped as +elements+
       def elements
         mapped_checklist_of(:elements)
       end
 
-      # @return [Hash<Symbol>]
+      # @return [Array<Symbol>]
       # All expected items that were mapped as +section+
       def section
         mapped_checklist_of(:section)
       end
 
-      # @return [Hash<Symbol>]
+      # @return [Array<Symbol>]
       # All expected items that were mapped as +sections+
       def sections
         mapped_checklist_of(:sections)
       end
 
-      # @return [Hash<Symbol>]
+      # @return [Array<Symbol>]
       # All expected items that were mapped as +iframe+
       def iframe
         mapped_checklist_of(:iframe)

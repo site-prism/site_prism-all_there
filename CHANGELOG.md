@@ -4,6 +4,8 @@
 ### Added
 
 ### Changed
+- Bumped internal dev requirements for all rubocop packages to latest versions ([#22] / [#23])
+  ([luke-hill])
 
 ### Fixed
 
@@ -120,6 +122,8 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
+[#23]:        https://github.com/site-prism/site_prism-all_there/pull/23
+[#22]:        https://github.com/site-prism/site_prism-all_there/pull/22
 [#21]:        https://github.com/site-prism/site_prism-all_there/pull/21
 [#20]:        https://github.com/site-prism/site_prism-all_there/pull/20
 [#12]:        https://github.com/site-prism/site_prism-all_there/issues/12
