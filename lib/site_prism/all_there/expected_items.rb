@@ -29,37 +29,37 @@ module SitePrism
       # @return [Array<Symbol>]
       # All expected items that were mapped as +element+
       def element
-        mapped_checklist_of(:element)
+        mapped_checklist_of(:element) || []
       end
 
       # @return [Array<Symbol>]
       # All expected items that were mapped as +elements+
       def elements
-        mapped_checklist_of(:elements)
+        mapped_checklist_of(:elements) || []
       end
 
       # @return [Array<Symbol>]
       # All expected items that were mapped as +section+
       def section
-        mapped_checklist_of(:section)
+        mapped_checklist_of(:section) || []
       end
 
       # @return [Array<Symbol>]
       # All expected items that were mapped as +sections+
       def sections
-        mapped_checklist_of(:sections)
+        mapped_checklist_of(:sections) || []
       end
 
       # @return [Array<Symbol>]
       # All expected items that were mapped as +iframe+
       def iframe
-        mapped_checklist_of(:iframe)
+        mapped_checklist_of(:iframe) || []
       end
 
       private
 
       def mapped_checklist_of(type)
-        mapped_items.hash[type].select { |name| mapped_checklist.include?(name) }
+        mapped_items.hash[type]&.select { |name| mapped_checklist.include?(name) }
       end
 
       def mapped_checklist
