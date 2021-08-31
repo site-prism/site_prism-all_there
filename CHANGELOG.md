@@ -7,6 +7,9 @@
 - Bumped internal dev requirements for all rubocop packages to latest versions ([#22] / [#23])
   ([luke-hill])
 
+- Switched CI from defunct travis to Github Actions ([#25])
+  ([luke-hill])
+
 ### Fixed
 - Guarded against the internal checklist throwing a NME if trying to fetch a DSL type that wasn't
   in existence (In theory shouldn't be possible) ([#24])
@@ -125,6 +128,7 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
+[#25]:        https://github.com/site-prism/site_prism-all_there/pull/25
 [#24]:        https://github.com/site-prism/site_prism-all_there/pull/24
 [#23]:        https://github.com/site-prism/site_prism-all_there/pull/23
 [#22]:        https://github.com/site-prism/site_prism-all_there/pull/22
