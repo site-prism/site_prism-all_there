@@ -4,6 +4,15 @@
 ### Added
 
 ### Changed
+
+### Fixed
+
+## [1.0.1] - 2021-09-01
+### Removed
+
+### Added
+
+### Changed
 - Bumped internal dev requirements for all rubocop packages to latest versions ([#22] / [#23])
   ([luke-hill])
 
@@ -115,6 +124,7 @@
 
 <!-- Releases -->
 [main]:       https://github.com/site-prism/site_prism-all_there/compare/v1.0...main
+[1.0.1]:      https://github.com/site-prism/site_prism-all_there/compare/v1.0...v1.0.1
 [1.0]:        https://github.com/site-prism/site_prism-all_there/compare/v0.3.2...v1.0
 [0.3.2]:      https://github.com/site-prism/site_prism-all_there/compare/v0.3.1...v0.3.2
 [0.3.1]:      https://github.com/site-prism/site_prism-all_there/compare/v0.3...v0.3.1
