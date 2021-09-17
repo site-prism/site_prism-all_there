@@ -11,8 +11,9 @@ $ bundle
 Write your code. Make sure to add unit tests **AND** documentation
 
 ```bash
-# Run all rspec tests, then run rubocop. Make sure it all passes
-$ bundle exec rake
+# Run all rspec tests and rubocop. Make sure it all passes
+$ bundle exec rspec
+$ bundle exec rubocop
 ```
 
 Submit your pull request to the repo
