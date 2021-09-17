@@ -4,6 +4,10 @@
 ### Added
 
 ### Changed
+- GHA now just uses regular `rubocop` / `rspec` instead of `rake` wrapper ([#27])
+
+- Bumped internal dev requirements for all rubocop packages to latest versions ([#27])
+  ([luke-hill])
 
 ### Fixed
 
@@ -138,6 +142,7 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
+[#27]:        https://github.com/site-prism/site_prism-all_there/pull/27
 [#25]:        https://github.com/site-prism/site_prism-all_there/pull/25
 [#24]:        https://github.com/site-prism/site_prism-all_there/pull/24
 [#23]:        https://github.com/site-prism/site_prism-all_there/pull/23
