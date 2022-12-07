@@ -6,61 +6,69 @@
 
 describe SitePrism::AllThere::RecursionChecker do
   let(:page) { described_class.new(passing_page) }
+  let(:positive) { described_class.new(passing_page) }
+  let(:negative) { described_class.new(passing_page) }
 
   before do
     allow(page).to receive(:current_class_all_there?).and_return(true)
     allow(page).to receive(:section_classes_all_there?).and_return(true)
     allow(page).to receive(:sections_classes_all_there?).and_return(true)
+    allow(positive).to receive(:current_class_all_there?).and_return(true)
+    allow(positive).to receive(:section_classes_all_there?).and_return(true)
+    allow(positive).to receive(:sections_classes_all_there?).and_return(true)
+    allow(negative).to receive(:current_class_all_there?).and_return(false)
+    allow(negative).to receive(:section_classes_all_there?).and_return(false)
+    allow(negative).to receive(:sections_classes_all_there?).and_return(false)
   end
 
   describe '#all_there?' do
-    context 'with recursion not set' do
+    context 'with recursion not set - it will recurse by default' do
       it 'returns `true` for pages that are `all_there?`' do
-        expect(passing_page.all_there?).to be true
+        expect(positive.all_there?).to be true
       end
 
       it 'returns `false` for pages that are not `all_there?`' do
-        expect(failing_page.all_there?).to be false
+        expect(negative.all_there?).to be false
       end
 
-      it 'does not perform checks on descendant section items' do
-        expect(passing_page).not_to receive(:section_classes_all_there?)
+      it 'performs checks on descendant `section` items' do
+        expect(positive).to receive(:section_classes_all_there?)
 
-        passing_page.all_there?
+        positive.all_there?
       end
 
-      it 'does not perform checks on descendant sections items' do
-        expect(passing_page).not_to receive(:sections_classes_all_there?)
+      it 'performs checks on descendant `sections` items' do
+        expect(positive).to receive(:sections_classes_all_there?)
 
-        passing_page.all_there?
+        positive.all_there?
       end
 
-      it 'will check the value of SitePrism.recursion_setting' do
+      it 'will check the value of SitePrism.recursion_setting if recursion is not :one' do
         expect(SitePrism).to receive(:recursion_setting)
 
-        page.all_there?(recursion: double)
+        page.all_there?(recursion: :not_one)
       end
     end
 
     context 'with recursion set to :none' do
       it 'returns `true` for pages that are `all_there?`' do
-        expect(passing_page.all_there?(recursion: :none)).to be true
+        expect(positive.all_there?(recursion: :none)).to be true
       end
 
       it 'returns `false` for pages that are not `all_there?`' do
-        expect(failing_page.all_there?(recursion: :none)).to be false
+        expect(negative.all_there?(recursion: :none)).to be false
       end
 
       it 'does not perform checks on descendant section items' do
-        expect(passing_page).not_to receive(:section_classes_all_there?)
+        expect(positive).not_to receive(:section_classes_all_there?)
 
-        passing_page.all_there?
+        positive.all_there?(recursion: :none)
       end
 
       it 'does not perform checks on descendant sections items' do
-        expect(passing_page).not_to receive(:sections_classes_all_there?)
+        expect(positive).not_to receive(:sections_classes_all_there?)
 
-        passing_page.all_there?
+        positive.all_there?(recursion: :none)
       end
     end
 
