@@ -7,7 +7,7 @@ require 'capybara/dsl'
 describe SitePrism::AllThere::RecursionChecker do
   let(:page) { described_class.new(passing_page) }
   let(:positive) { described_class.new(passing_page) }
-  let(:negative) { described_class.new(passing_page) }
+  let(:negative) { described_class.new(failing_page) }
 
   before do
     allow(page).to receive(:current_class_all_there?).and_return(true)
