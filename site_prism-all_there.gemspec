@@ -5,7 +5,7 @@ require './lib/site_prism/all_there/version'
 Gem::Specification.new do |s|
   s.name        = 'site_prism-all_there'
   s.version     = SitePrism::AllThere::VERSION
-  s.required_ruby_version = '>= 2.5'
+  s.required_ruby_version = '>= 2.6'
   s.platform    = Gem::Platform::RUBY
   s.license     = 'BSD-3-Clause'
   s.authors     = ['Luke Hill']
@@ -22,10 +22,10 @@ page/section/element structures on your page - exclusively for use with the Site
   s.files        = Dir.glob('lib/**/*') + %w[LICENSE.md README.md]
   s.require_path = 'lib'
 
-  s.add_development_dependency 'rspec', ['~> 3.10']
-  s.add_development_dependency 'rubocop', ['~> 1.21.0']
-  s.add_development_dependency 'rubocop-performance', ['~> 1.11.5']
-  s.add_development_dependency 'rubocop-rspec', ['~> 2.4.0']
-  s.add_development_dependency 'site_prism', ['~> 3.7']
+  s.add_development_dependency 'rspec', ['~> 3.12']
+  s.add_development_dependency 'rubocop', ['~> 1.39.0']
+  s.add_development_dependency 'rubocop-performance', ['~> 1.15.1']
+  s.add_development_dependency 'rubocop-rspec', ['~> 2.15.0']
+  s.add_development_dependency 'site_prism', ['> 3.7', '< 5']
   s.add_development_dependency 'yard', ['~> 0.9']
 end

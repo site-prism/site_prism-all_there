@@ -1,24 +1,24 @@
+inherit_from: .rubocop_todo.yml
+
 require:
   - rubocop-performance
   - rubocop-rspec
 
 AllCops:
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 2.6
   NewCops: enable
 
-# Allow a longer linelength in SitePrism and ignore Gherkin definitions
+# We don't use MFA
+Gemspec/RequireMFA:
+  Enabled: false
+
+# Allow a longer Line Length in SitePrism and ignore Gherkin definitions
 Layout/LineLength:
-  Max: 100
-  IgnoredPatterns:
+  Max: 120
+  AllowedPatterns:
     - ^Given
     - ^When
     - ^Then
-
-# These two will always break the metric. Should be added to rubocop-rspec
-Metrics/BlockLength:
-  Exclude:
-    - ./spec/**/*_spec.rb
-    - site_prism-all_there.gemspec
 
 # This rule isn't valid for shared contexts
 RSpec/ContextWording:
