@@ -27,8 +27,8 @@ describe SitePrism::AllThere::RecursionChecker do
         expect(completely_missing.all_there?).to be false
       end
 
-      it 'returns `false` for pages that have some items and descendant items present' do
-        expect(partially_present.all_there?(recursion: :one)).to be false
+      it 'returns `false` for pages that have regular items present BUT NOT descendant items' do
+        expect(partially_present.all_there?).to be false
       end
 
       it 'performs checks on the page itself' do
@@ -60,7 +60,7 @@ describe SitePrism::AllThere::RecursionChecker do
       end
 
       it 'returns `true` for pages that have regular items present BUT NOT descendant items' do
-        expect(partially_present.all_there?(recursion: :one)).to be true
+        expect(partially_present.all_there?(recursion: :none)).to be true
       end
 
       it 'does not perform checks on descendant section items' do
@@ -91,7 +91,7 @@ describe SitePrism::AllThere::RecursionChecker do
         expect(completely_missing.all_there?(recursion: :one)).to be false
       end
 
-      it 'returns `false` for pages that have some items and descendant items present' do
+      it 'returns `false` for pages that have regular items present BUT NOT descendant items' do
         expect(partially_present.all_there?(recursion: :one)).to be false
       end
 
