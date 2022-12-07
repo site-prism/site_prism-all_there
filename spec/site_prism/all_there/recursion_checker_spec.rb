@@ -27,6 +27,12 @@ describe SitePrism::AllThere::RecursionChecker do
         expect(negative.all_there?).to be false
       end
 
+      it 'performs checks on the page itself' do
+        expect(positive).to receive(:current_class_all_there?)
+
+        positive.all_there?
+      end
+
       it 'performs checks on descendant `section` items' do
         expect(positive).to receive(:section_classes_all_there?)
 
@@ -37,12 +43,6 @@ describe SitePrism::AllThere::RecursionChecker do
         expect(positive).to receive(:sections_classes_all_there?)
 
         positive.all_there?
-      end
-
-      it 'will check the value of SitePrism.recursion_setting if recursion is not :one' do
-        expect(SitePrism).to receive(:recursion_setting)
-
-        positive.all_there?(recursion: :not_one)
       end
     end
 
@@ -63,6 +63,12 @@ describe SitePrism::AllThere::RecursionChecker do
 
       it 'does not perform checks on descendant sections items' do
         expect(positive).not_to receive(:sections_classes_all_there?)
+
+        positive.all_there?(recursion: :none)
+      end
+
+      it 'will check the value of SitePrism.recursion_setting' do
+        expect(SitePrism).to receive(:recursion_setting)
 
         positive.all_there?(recursion: :none)
       end
@@ -105,6 +111,12 @@ describe SitePrism::AllThere::RecursionChecker do
 
         positive.all_there?(recursion: :one)
       end
+    end
+
+    it 'will check the value of SitePrism.recursion_setting if recursion is not :one' do
+      expect(SitePrism).to receive(:recursion_setting)
+
+      positive.all_there?(recursion: :not_one)
     end
   end
 end
