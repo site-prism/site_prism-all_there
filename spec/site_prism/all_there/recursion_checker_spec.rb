@@ -5,8 +5,8 @@ require 'capybara'
 require 'capybara/dsl'
 
 describe SitePrism::AllThere::RecursionChecker do
-  let(:positive) { described_class.new(passing_page) }
-  let(:negative) { described_class.new(failing_page) }
+  let(:positive) { described_class.new(mock_page) }
+  let(:negative) { described_class.new(mock_page) }
 
   before do
     allow(positive).to receive(:current_class_all_there?).and_return(true)
@@ -75,13 +75,13 @@ describe SitePrism::AllThere::RecursionChecker do
     end
 
     context 'with recursion set to :one' do
-      let(:page_there?) { passing_page.all_there? }
-      let(:sections_there?) { passing_page.sections_classes_to_check.flatten.all?(&:all_there?) }
-      let(:section_there?) { passing_page.section_classes_to_check.all?(&:all_there?) }
+      let(:page_there?) { mock_page.all_there? }
+      let(:sections_there?) { mock_page.sections_classes_to_check.flatten.all?(&:all_there?) }
+      let(:section_there?) { mock_page.section_classes_to_check.all?(&:all_there?) }
 
       before do
         # Set the `all_there?` check to be the legit one that recurses
-        allow(passing_page).to receive(:all_there?).with(recursion: :one) do
+        allow(mock_page).to receive(:all_there?).with(recursion: :one) do
           page_there? && section_there? && sections_there?
         end
       end
