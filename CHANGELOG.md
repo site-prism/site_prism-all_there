@@ -1,69 +1,56 @@
 ## [main] - Unreleased
 ### Removed
-
+- A huge amount of testing scaffolding is now removed ([luke-hill] - [#30])
 ### Added
 
 ### Changed
-- GHA now just uses regular `rubocop` / `rspec` instead of `rake` wrapper ([#27])
+- GHA now just uses regular `rubocop` / `rspec` instead of `rake` wrapper ([luke-hill] - [#27])
 
-- Bumped internal dev requirements for all rubocop packages to latest versions ([#27] / [#29])
-  ([luke-hill])
+- Bumped internal dev requirements for all rubocop packages to latest versions ([luke-hill] - [#27] / [#29])
 
-- **Required Ruby Version is now 2.6+** ([#29])
+- **Required Ruby Version is now 2.6+** ([luke-hill] - [#29])
 ### Fixed
 
 ## [1.0.1] - 2021-09-01
-### Removed
-
-### Added
-
 ### Changed
-- Bumped internal dev requirements for all rubocop packages to latest versions ([#22] / [#23])
-  ([luke-hill])
+- Bumped internal dev requirements for all rubocop packages to latest versions
+([luke-hill] - [#22] / [#23])
 
-- Switched CI from defunct travis to Github Actions ([#25])
-  ([luke-hill])
+- Switched CI from defunct travis to Github Actions ([luke-hill] - [#25])
 
 ### Fixed
 - Guarded against the internal checklist throwing a NME if trying to fetch a DSL type that wasn't
-  in existence (In theory shouldn't be possible) ([#24])
-  ([luke-hill])
+  in existence (In theory shouldn't be possible) ([luke-hill] - [#24])
 
 ## [1.0] - 2021-03-29
 ### Added
-- Basic debugging for each type of `#all_there?` check ([#21])
+- Basic debugging for each type of `#all_there?` check ([luke-hill] - [#21])
 ([luke-hill])
 
 ### Changed
-- Massively bumped internal dev requirements
-  ([luke-hill])
+- Massively bumped internal dev requirements ([luke-hill])
 
-- **Required Ruby Version is now 2.5+** ([#20])
-  ([luke-hill])
+- **Required Ruby Version is now 2.5+** ([luke-hill] - [#20])
 
 ### Fixed
-- Fixed up some tests which weren't running against the correct code-path ([#20])
+- Fixed up some tests which weren't running against the correct code-path ([luke-hill] - [#20])
 
 ## [0.3.2] - 2019-12-16
 ### Added
-- Full `yard` documentation coverage of entire gem
-([luke-hill])
+- Full `yard` documentation coverage of entire gem ([luke-hill])
 
 ### Changed
-- Altered rspec tests to only make 1 assertion per test
-([luke-hill])
+- Altered rspec tests to only make 1 assertion per test ([luke-hill])
 
 - DRYed up the `ExpectedItems` class to only have the public `array` method call the other defined methods
 ([luke-hill])
 
 ## [0.3.1] - 2019-12-09
 ### Changed
-- Bumped internal rubocop dev requirement from `0.73` to `0.75`
-([luke-hill])
+- Bumped internal rubocop dev requirement from `0.73` to `0.75` ([luke-hill])
 
 ### Fixed
-- Fixed an issue where `ExpectedItems` wasn't added to the gems load path ([#12])
-([luke-hill])
+- Fixed an issue where `ExpectedItems` wasn't added to the gems load path ([luke-hill] - [#12])
 
 ## [0.3] - 2019-09-05
 ### Added
@@ -87,6 +74,7 @@
   - At runtime pass in either `:none` or `:one` to recurse or not recurse
   - A global config of `SitePrism.recursion_setting` can also be used (Same values)
   - By default this will be set to `:one`
+([luke-hill])
 
 ### Fixed
 - The file locations / names of all files / test files to avoid namespace conflicts
@@ -95,37 +83,29 @@
 
 ## [0.1.1] - 2019-07-03
 ### Removed
-- HACKING.md is now nice and concise, removed almost all the crud!
-([luke-hill])
+- HACKING.md is now nice and concise, removed almost all the crud! ([luke-hill])
 
 ### Added
 - Configuration settings are now located in the `SitePrism` namespace to sit alongside the main gem
 ([luke-hill])
 
-- Added mocked specs to test about 80% of the codebase
-([luke-hill])
+- Added mocked specs to test about 80% of the codebase ([luke-hill])
 
-- Added base usage docs in README
-([luke-hill])
+- Added base usage docs in README.md ([luke-hill])
 
 ### Changed
-- Altered the build pipeline for travis to run in under half the time (Removing unnecessary items)
-([luke-hill])
+- Altered the build pipeline for travis to run in under half the time (Removing unnecessary items) ([luke-hill])
 
-- Use latest rubocop settings and fix up all cop offenses in suite
-([luke-hill])
+- Use latest rubocop settings and fix up all cop offenses in suite ([luke-hill])
 
-- Refactored the code into a secondary class: `MappedItems` to try make error triaging easier
-([luke-hill])
+- Refactored the code into a secondary class: `MappedItems` to try make error triaging easier ([luke-hill])
 
 ### Fixed
-- Travis build now passes (ruby-head ignore issue)
-([luke-hill])
+- Travis build now passes (ruby-head ignore issue) ([luke-hill])
 
 ## [0.1] - 2019-07-01
 ### Added
-- Base code from site_prism repo
-([luke-hill])
+- Base code from site_prism repo ([luke-hill])
 
 <!-- Releases -->
 [main]:       https://github.com/site-prism/site_prism-all_there/compare/v1.0...main
@@ -143,6 +123,7 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
+[#30]:        https://github.com/site-prism/site_prism-all_there/pull/30
 [#29]:        https://github.com/site-prism/site_prism-all_there/pull/29
 [#27]:        https://github.com/site-prism/site_prism-all_there/pull/27
 [#25]:        https://github.com/site-prism/site_prism-all_there/pull/25
