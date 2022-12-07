@@ -20,7 +20,7 @@ describe SitePrism do
 
   describe '.recursion_setting' do
     it 'shows the recursion_setting' do
-      expect(described_class.recursion_setting).to be nil
+      expect(described_class.recursion_setting).to be_nil
     end
   end
 
