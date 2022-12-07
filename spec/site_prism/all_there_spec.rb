@@ -13,22 +13,7 @@ describe SitePrism do
 
       described_class.configure do |config|
         config.recursion_setting = :foo
-        config.recursion_setting
       end
-    end
-  end
-
-  describe '.recursion_setting' do
-    it 'shows the recursion_setting' do
-      expect(described_class.recursion_setting).to be_nil
-    end
-  end
-
-  describe '.recursion_setting=' do
-    it 'alters the recursion_setting' do
-      expect(described_class).to receive(:recursion_setting=).with(:one)
-
-      described_class.recursion_setting = :one
     end
   end
 end

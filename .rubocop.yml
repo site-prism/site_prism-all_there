@@ -1,5 +1,3 @@
-inherit_from: .rubocop_todo.yml
-
 require:
   - rubocop-performance
   - rubocop-rspec
@@ -11,19 +9,6 @@ AllCops:
 # We don't use MFA
 Gemspec/RequireMFA:
   Enabled: false
-
-# Allow a longer Line Length in SitePrism and ignore Gherkin definitions
-Layout/LineLength:
-  Max: 120
-  AllowedPatterns:
-    - ^Given
-    - ^When
-    - ^Then
-
-# This rule isn't valid for shared contexts
-RSpec/ContextWording:
-  Exclude:
-    - spec/support/shared_context/**.rb
 
 # This file is in a diff namespace for both lib and spec
 # This is because otherwise we would get a name conflict

@@ -1,124 +1,123 @@
 # frozen_string_literal: true
 
-# require 'site_prism'
-# require 'capybara'
-# require 'capybara/dsl'
-
 describe SitePrism::AllThere::RecursionChecker do
-  let(:page) { described_class.new(passing_page) }
+  let(:completely_present) { described_class.new(double) }
+  let(:completely_missing) { described_class.new(double) }
+  let(:partially_present) { described_class.new(double) }
 
   before do
-    allow(page).to receive(:current_class_all_there?).and_return(true)
-    allow(page).to receive(:section_classes_all_there?).and_return(true)
-    allow(page).to receive(:sections_classes_all_there?).and_return(true)
+    allow(completely_present).to receive(:current_class_all_there?).and_return(true)
+    allow(completely_present).to receive(:section_classes_all_there?).and_return(true)
+    allow(completely_present).to receive(:sections_classes_all_there?).and_return(true)
+    allow(completely_missing).to receive(:current_class_all_there?).and_return(false)
+    allow(completely_missing).to receive(:section_classes_all_there?).and_return(false)
+    allow(completely_missing).to receive(:sections_classes_all_there?).and_return(false)
+    allow(partially_present).to receive(:current_class_all_there?).and_return(true)
+    allow(partially_present).to receive(:section_classes_all_there?).and_return(false)
+    allow(partially_present).to receive(:sections_classes_all_there?).and_return(false)
   end
 
   describe '#all_there?' do
-    context 'with recursion not set' do
-      it 'returns `true` for pages that are `all_there?`' do
-        expect(passing_page.all_there?).to be true
+    context 'with recursion not set - it will recurse by default' do
+      it 'returns `true` for pages that have every item and descendant item present' do
+        expect(completely_present.all_there?).to be true
       end
 
-      it 'returns `false` for pages that are not `all_there?`' do
-        expect(failing_page.all_there?).to be false
+      it 'returns `false` for pages that do not have every item and descendant item present' do
+        expect(completely_missing.all_there?).to be false
+      end
+
+      it 'returns `false` for pages that have regular items present BUT NOT descendant items' do
+        expect(partially_present.all_there?).to be false
+      end
+
+      it 'performs checks on the page itself' do
+        expect(completely_present).to receive(:current_class_all_there?)
+
+        completely_present.all_there?
+      end
+
+      it 'performs checks on descendant `section` items' do
+        expect(completely_present).to receive(:section_classes_all_there?)
+
+        completely_present.all_there?
+      end
+
+      it 'performs checks on descendant `sections` items' do
+        expect(completely_present).to receive(:sections_classes_all_there?)
+
+        completely_present.all_there?
+      end
+    end
+
+    context 'with recursion set to :none' do
+      it 'returns `true` for pages that have every item present' do
+        expect(completely_present.all_there?(recursion: :none)).to be true
+      end
+
+      it 'returns `false` for pages that do not have every item present' do
+        expect(completely_missing.all_there?(recursion: :none)).to be false
+      end
+
+      it 'returns `true` for pages that have regular items present BUT NOT descendant items' do
+        expect(partially_present.all_there?(recursion: :none)).to be true
       end
 
       it 'does not perform checks on descendant section items' do
-        expect(passing_page).not_to receive(:section_classes_all_there?)
+        expect(completely_present).not_to receive(:section_classes_all_there?)
 
-        passing_page.all_there?
+        completely_present.all_there?(recursion: :none)
       end
 
       it 'does not perform checks on descendant sections items' do
-        expect(passing_page).not_to receive(:sections_classes_all_there?)
+        expect(completely_present).not_to receive(:sections_classes_all_there?)
 
-        passing_page.all_there?
+        completely_present.all_there?(recursion: :none)
       end
 
       it 'will check the value of SitePrism.recursion_setting' do
         expect(SitePrism).to receive(:recursion_setting)
 
-        page.all_there?(recursion: double)
-      end
-    end
-
-    context 'with recursion set to :none' do
-      it 'returns `true` for pages that are `all_there?`' do
-        expect(passing_page.all_there?(recursion: :none)).to be true
-      end
-
-      it 'returns `false` for pages that are not `all_there?`' do
-        expect(failing_page.all_there?(recursion: :none)).to be false
-      end
-
-      it 'does not perform checks on descendant section items' do
-        expect(passing_page).not_to receive(:section_classes_all_there?)
-
-        passing_page.all_there?
-      end
-
-      it 'does not perform checks on descendant sections items' do
-        expect(passing_page).not_to receive(:sections_classes_all_there?)
-
-        passing_page.all_there?
+        completely_present.all_there?(recursion: :none)
       end
     end
 
     context 'with recursion set to :one' do
-      let(:page_there?) { passing_page.all_there? }
-      let(:sections_there?) { passing_page.sections_classes_to_check.flatten.all?(&:all_there?) }
-      let(:section_there?) { passing_page.section_classes_to_check.all?(&:all_there?) }
-
-      before do
-        # Set the `all_there?` check to be the legit one that recurses
-        allow(passing_page).to receive(:all_there?).with(recursion: :one) do
-          page_there? && section_there? && sections_there?
-        end
-      end
-
       it 'returns `true` for pages that have every item and descendant item present' do
-        mock_page_as :passing
-
-        expect(passing_page.all_there?(recursion: :one)).to be true
+        expect(completely_present.all_there?(recursion: :one)).to be true
       end
 
       it 'returns `false` for pages that do not have every item and descendant item present' do
-        mock_page_as :failing
+        expect(completely_missing.all_there?(recursion: :one)).to be false
+      end
 
-        expect(passing_page.all_there?(recursion: :one)).to be false
+      it 'returns `false` for pages that have regular items present BUT NOT descendant items' do
+        expect(partially_present.all_there?(recursion: :one)).to be false
       end
 
       it 'performs checks on the page itself' do
-        expect(page).to receive(:current_class_all_there?)
+        expect(completely_present).to receive(:current_class_all_there?)
 
-        page.all_there?(recursion: :one)
+        completely_present.all_there?(recursion: :one)
       end
 
       it 'performs checks on descendant section items' do
-        expect(page).to receive(:section_classes_all_there?)
+        expect(completely_present).to receive(:section_classes_all_there?)
 
-        page.all_there?(recursion: :one)
+        completely_present.all_there?(recursion: :one)
       end
 
       it 'performs checks on descendant sections items' do
-        expect(page).to receive(:sections_classes_all_there?)
+        expect(completely_present).to receive(:sections_classes_all_there?)
 
-        page.all_there?(recursion: :one)
+        completely_present.all_there?(recursion: :one)
       end
     end
-  end
 
-  # This mocks the `passing_page` as having a set of section/sections items attached.
-  # Dependent on `type` parameter depends on whether this will pass or fail the +#all_there?+
-  # check that will be called on passing_page
-  def mock_page_as(type)
-    allow(passing_page)
-      .to receive_messages(
-        section_classes_to_check: passing_sections,
-        sections_classes_to_check: [
-          passing_sections,
-          send("#{type}_sections"),
-        ]
-      )
+    it 'will check the value of SitePrism.recursion_setting if recursion is not :one' do
+      expect(SitePrism).to receive(:recursion_setting)
+
+      completely_present.all_there?(recursion: :not_one)
+    end
   end
 end
