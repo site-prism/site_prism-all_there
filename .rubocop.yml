@@ -12,14 +12,6 @@ AllCops:
 Gemspec/RequireMFA:
   Enabled: false
 
-# Allow a longer Line Length in SitePrism and ignore Gherkin definitions
-Layout/LineLength:
-  Max: 120
-  AllowedPatterns:
-    - ^Given
-    - ^When
-    - ^Then
-
 # This rule isn't valid for shared contexts
 RSpec/ContextWording:
   Exclude:
