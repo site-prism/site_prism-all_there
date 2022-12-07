@@ -47,11 +47,11 @@ describe SitePrism::AllThere::RecursionChecker do
     end
 
     context 'with recursion set to :none' do
-      it 'returns `true` for pages that are `all_there?`' do
+      it 'returns `true` for pages that have every item present' do
         expect(positive.all_there?(recursion: :none)).to be true
       end
 
-      it 'returns `false` for pages that are not `all_there?`' do
+      it 'returns `false` for pages that do not have every item present' do
         expect(negative.all_there?(recursion: :none)).to be false
       end
 
