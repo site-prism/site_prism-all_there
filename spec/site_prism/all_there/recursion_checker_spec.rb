@@ -1,9 +1,5 @@
 # frozen_string_literal: true
 
-# require 'site_prism'
-require 'capybara'
-require 'capybara/dsl'
-
 describe SitePrism::AllThere::RecursionChecker do
   let(:positive) { described_class.new(mock_page) }
   let(:negative) { described_class.new(mock_page) }
