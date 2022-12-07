@@ -13,7 +13,6 @@ describe SitePrism do
 
       described_class.configure do |config|
         config.recursion_setting = :foo
-        config.recursion_setting
       end
     end
   end

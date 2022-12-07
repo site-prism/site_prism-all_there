@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 describe SitePrism::AllThere::RecursionChecker do
+  let(:mock_page) { instance_double('SitePrism::Page', 'Mock Page') }
+
   let(:completely_present) { described_class.new(mock_page) }
   let(:completely_missing) { described_class.new(mock_page) }
   let(:partially_present) { described_class.new(mock_page) }
