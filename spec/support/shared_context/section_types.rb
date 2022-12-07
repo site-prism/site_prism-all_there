@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.shared_context 'Section Types' do
+RSpec.shared_context 'with mock sections' do
   let(:passing_sections) { [passing_section, passing_section] }
   let(:failing_sections) { [passing_section, failing_section] }
 

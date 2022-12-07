@@ -12,11 +12,6 @@ AllCops:
 Gemspec/RequireMFA:
   Enabled: false
 
-# This rule isn't valid for shared contexts
-RSpec/ContextWording:
-  Exclude:
-    - spec/support/shared_context/**.rb
-
 # This file is in a diff namespace for both lib and spec
 # This is because otherwise we would get a name conflict
 RSpec/FilePath:
