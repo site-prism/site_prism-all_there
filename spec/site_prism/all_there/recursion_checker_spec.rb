@@ -23,11 +23,11 @@ describe SitePrism::AllThere::RecursionChecker do
 
   describe '#all_there?' do
     context 'with recursion not set - it will recurse by default' do
-      it 'returns `true` for pages that are `all_there?`' do
+      it 'returns `true` for pages that have every item and descendant item present' do
         expect(positive.all_there?).to be true
       end
 
-      it 'returns `false` for pages that are not `all_there?`' do
+      it 'returns `false` for pages that do not have every item and descendant item present' do
         expect(negative.all_there?).to be false
       end
 
@@ -85,15 +85,11 @@ describe SitePrism::AllThere::RecursionChecker do
       end
 
       it 'returns `true` for pages that have every item and descendant item present' do
-        mock_page_as :passing
-
-        expect(passing_page.all_there?(recursion: :one)).to be true
+        expect(positive.all_there?(recursion: :one)).to be true
       end
 
       it 'returns `false` for pages that do not have every item and descendant item present' do
-        mock_page_as :failing
-
-        expect(passing_page.all_there?(recursion: :one)).to be false
+        expect(negative.all_there?(recursion: :one)).to be false
       end
 
       it 'performs checks on the page itself' do
