@@ -1,15 +1,20 @@
 ## [main] - Unreleased
 ### Removed
 - A huge amount of testing scaffolding is now removed ([luke-hill] - [#30])
+
 ### Added
 
+### Changed
+
+### Fixed
+
+## [1.1] - 2022-12-07
 ### Changed
 - GHA now just uses regular `rubocop` / `rspec` instead of `rake` wrapper ([luke-hill] - [#27])
 
 - Bumped internal dev requirements for all rubocop packages to latest versions ([luke-hill] - [#27] / [#29])
 
 - **Required Ruby Version is now 2.6+** ([luke-hill] - [#29])
-### Fixed
 
 ## [1.0.1] - 2021-09-01
 ### Changed
@@ -108,7 +113,8 @@
 - Base code from site_prism repo ([luke-hill])
 
 <!-- Releases -->
-[main]:       https://github.com/site-prism/site_prism-all_there/compare/v1.0...main
+[main]:       https://github.com/site-prism/site_prism-all_there/compare/v1.1...main
+[1.1]:        https://github.com/site-prism/site_prism-all_there/compare/v1.0.1...v1.1
 [1.0.1]:      https://github.com/site-prism/site_prism-all_there/compare/v1.0...v1.0.1
 [1.0]:        https://github.com/site-prism/site_prism-all_there/compare/v0.3.2...v1.0
 [0.3.2]:      https://github.com/site-prism/site_prism-all_there/compare/v0.3.1...v0.3.2
