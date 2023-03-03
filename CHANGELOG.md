@@ -3,9 +3,14 @@
 - A huge amount of testing scaffolding is now removed ([luke-hill] - [#30])
 
 ### Added
+- A huge amount of working documentation for using the gem and recursing through objects ([luke-hill] - [#33])
 
 ### Changed
-
+**Breaking Change**:
+- The gem now treats the config setting as the source of truth
+  - Not setting this value **then** looks at the input parameter
+  - The input parameter is now mandatory (But this will be passed from the main gem)
+    ([luke-hill] - [#33])
 ### Fixed
 
 ## [1.1] - 2022-12-07
@@ -129,6 +134,7 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
+[#33]:        https://github.com/site-prism/site_prism-all_there/pull/33
 [#30]:        https://github.com/site-prism/site_prism-all_there/pull/30
 [#29]:        https://github.com/site-prism/site_prism-all_there/pull/29
 [#27]:        https://github.com/site-prism/site_prism-all_there/pull/27
