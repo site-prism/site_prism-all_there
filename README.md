@@ -45,7 +45,7 @@ your_page.all_there?(recursion: :invalid)  # This will not perform any checks an
 ```rb
 SitePrism.recursion_setting = :one
 your_page = YourPage.new
-your_page.all_there? # This will do the standard `#all_there?` check on the current page as well recursing into all `:section` or `:sections` objects and then doing the standard `#all_there?` check on those sections
+your_page.all_there?(recursion: :ignore) # This will do the standard `#all_there?` check on the current page as well recursing into all `:section` or `:sections` objects and then doing the standard `#all_there?` check on those sections
 # or...
 
 SitePrism.configure do |config|
@@ -53,7 +53,7 @@ SitePrism.configure do |config|
 end
 
 your_page = YourPage.new
-your_page.all_there? # This will do the standard `#all_there?` check on the current page as well recursing into all `:section` or `:sections` objects and then doing the standard `#all_there?` check on those `Section` instances
+your_page.all_there?(recursion: :ignore) # This will do the standard `#all_there?` check on the current page as well recursing into all `:section` or `:sections` objects and then doing the standard `#all_there?` check on those `Section` instances
 ```
 
 Then you can perform the above checks using the global config.
