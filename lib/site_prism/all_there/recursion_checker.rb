@@ -17,12 +17,16 @@ module SitePrism
       # It will be refactored to use either no input, +:none+, or +:one+ as the
       # regular repo uses currently
       def all_there?(recursion: :one)
-        if recursion == :one || SitePrism.recursion_setting == :one
-          current_class_all_there? &&
-            section_classes_all_there? &&
-            sections_classes_all_there?
-        else
+        recursion = SitePrism.recursion_setting if SitePrism.recursion_setting
+
+        case recursion
+        when :none
           current_class_all_there?
+        when :one
+          current_class_all_there? && section_classes_all_there? && sections_classes_all_there?
+        else
+          SitePrism.logger.debug("Input value '#{recursion}'. Valid values are :none or :one.")
+          SitePrism.logger.error('Invalid recursion setting, Will not run #all_there?.')
         end
       end
 
