@@ -119,5 +119,11 @@ describe SitePrism::AllThere::RecursionChecker do
 
       completely_present.all_there?(recursion: :not_one)
     end
+
+    it 'will not perform any methods if recursion is not valid' do
+      expect(SitePrism).to receive(:logger).twice.and_call_original
+
+      completely_present.all_there?(recursion: :not_one)
+    end
   end
 end
