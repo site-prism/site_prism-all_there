@@ -43,7 +43,7 @@ module SitePrism
           SitePrism.logger.debug("Result of section_classes_all_there?: #{result}")
         end
       end
-      
+
       def sections_classes_all_there?
         sections_classes_to_check.flatten.all?(&:all_there?).tap do |result|
           SitePrism.logger.debug("Result of section_classes_all_there?: #{result}")
