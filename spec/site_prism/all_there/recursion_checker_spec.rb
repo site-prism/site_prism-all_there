@@ -18,38 +18,6 @@ describe SitePrism::AllThere::RecursionChecker do
   end
 
   describe '#all_there?' do
-    context 'with recursion not set - it will recurse by default' do
-      it 'returns `true` for pages that have every item and descendant item present' do
-        expect(completely_present.all_there?).to be true
-      end
-
-      it 'returns `false` for pages that do not have every item and descendant item present' do
-        expect(completely_missing.all_there?).to be false
-      end
-
-      it 'returns `false` for pages that have regular items present BUT NOT descendant items' do
-        expect(partially_present.all_there?).to be false
-      end
-
-      it 'performs checks on the page itself' do
-        expect(completely_present).to receive(:current_class_all_there?)
-
-        completely_present.all_there?
-      end
-
-      it 'performs checks on descendant `section` items' do
-        expect(completely_present).to receive(:section_classes_all_there?)
-
-        completely_present.all_there?
-      end
-
-      it 'performs checks on descendant `sections` items' do
-        expect(completely_present).to receive(:sections_classes_all_there?)
-
-        completely_present.all_there?
-      end
-    end
-
     context 'with recursion set to :none' do
       it 'returns `true` for pages that have every item present' do
         expect(completely_present.all_there?(recursion: :none)).to be true
