@@ -5,12 +5,17 @@
 ### Added
 - A huge amount of working documentation for using the gem and recursing through objects ([luke-hill] - [#33])
 
+- CI now tests against Ruby 3.2 ([luke-hill] - [#34])
+
+- Dependabot updates brought into CI flow ([luke-hill] - [#34])
+
 ### Changed
 **Breaking Change**:
 - The gem now treats the config setting as the source of truth
   - Not setting this value **then** looks at the input parameter
-  - The input parameter is now mandatory (But this will be passed from the main gem)
+  - The input parameter is now mandatory
     ([luke-hill] - [#33])
+
 ### Fixed
 
 ## [1.1] - 2022-12-07
