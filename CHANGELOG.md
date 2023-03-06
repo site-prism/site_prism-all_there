@@ -139,6 +139,7 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
+[#34]:        https://github.com/site-prism/site_prism-all_there/pull/34
 [#33]:        https://github.com/site-prism/site_prism-all_there/pull/33
 [#30]:        https://github.com/site-prism/site_prism-all_there/pull/30
 [#29]:        https://github.com/site-prism/site_prism-all_there/pull/29
