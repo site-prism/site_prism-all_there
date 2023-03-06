@@ -1,9 +1,17 @@
 # site_prism-all_there
+- [History](#history)
+- [Enabling gem methods](#enabling-gem-methods)
+- [Usage](#usage)
+  - [In-line configuration](#in-line-configuration)
+  - [Global configuration](#global-configuration)
+- [Troubleshooting](#troubleshooting)
 
-The breakout gem from SitePrism to perform recursion checks for `#all_there?`
+## History
+
+This in the breakout gem from SitePrism to perform recursion checks for `#all_there?`
 
 This gem is a breakout of the current `SitePrism::Page#all_there?` and `SitePrism::Section#all_there?`
-methods which have already existed in the gem proper since version 2.
+methods which have already existed in the gem since version 2.
 
 The gem is **now finally** version stable. It will be added as default
 functionality in `site_prism` version 4. Which is slated for release early 2023!
@@ -30,7 +38,7 @@ end
 
 ## Usage
 
-### In-line recursions
+### In-line configuration
 
 ```rb
 your_page = YourPage.new
@@ -46,6 +54,7 @@ your_page.all_there?(recursion: :invalid)  # This will not perform any checks an
 SitePrism.recursion_setting = :one
 your_page = YourPage.new
 your_page.all_there?(recursion: :ignore) # This will do the standard `#all_there?` check on the current page as well recursing into all `:section` or `:sections` objects and then doing the standard `#all_there?` check on those sections
+
 # or...
 
 SitePrism.configure do |config|
@@ -58,7 +67,9 @@ your_page.all_there?(recursion: :ignore) # This will do the standard `#all_there
 
 Then you can perform the above checks using the global config.
 
-> NB: Mixing and matching the global config won't work - To come in v3!
+## Troubleshooting
+
+Mixing and matching the global config won't work - To come in v3!
 
 Happy Testing / Developing!
 
