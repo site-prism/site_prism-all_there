@@ -16,7 +16,7 @@ module SitePrism
       end
 
       # @return [Array<Array<Symbol>>]
-      # All expected mapped items
+      # All defined/expected mapped items
       def array
         [
           element,
@@ -28,31 +28,31 @@ module SitePrism
       end
 
       # @return [Array<Symbol>]
-      # All expected items that were mapped as +element+
+      # All defined/expected items that were mapped as +element+
       def element
         mapped_checklist_of(:element) || []
       end
 
       # @return [Array<Symbol>]
-      # All expected items that were mapped as +elements+
+      # All defined/expected items that were mapped as +elements+
       def elements
         mapped_checklist_of(:elements) || []
       end
 
       # @return [Array<Symbol>]
-      # All expected items that were mapped as +section+
+      # All defined/expected items that were mapped as +section+
       def section
         mapped_checklist_of(:section) || []
       end
 
       # @return [Array<Symbol>]
-      # All expected items that were mapped as +sections+
+      # All defined/expected items that were mapped as +sections+
       def sections
         mapped_checklist_of(:sections) || []
       end
 
       # @return [Array<Symbol>]
-      # All expected items that were mapped as +iframe+
+      # All defined/expected items that were mapped as +iframe+
       def iframe
         mapped_checklist_of(:iframe) || []
       end
