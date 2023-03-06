@@ -11,7 +11,7 @@ $ bundle
 Write your code. Make sure to add unit tests **AND** documentation
 
 ```bash
-# Run all rspec tests and rubocop. Make sure it all passes
+# Run all rspec tests and rubocop. Make sure they both completely pass
 $ bundle exec rspec
 $ bundle exec rubocop
 ```
@@ -19,7 +19,5 @@ $ bundle exec rubocop
 Submit your pull request to the repo
 
 Happy Testing / Developing!
-
-Cheers,
 
 The SitePrism Team

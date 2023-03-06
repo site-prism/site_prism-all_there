@@ -20,7 +20,7 @@ describe SitePrism::AllThere::RecursionChecker do
   describe '#all_there?' do
     after { SitePrism.recursion_setting = nil }
 
-    context 'with recursion set to :none' do
+    context 'with no recursion' do
       it 'returns `true` for pages that have every item present' do
         expect(completely_present.all_there?(recursion: :none)).to be true
       end
@@ -52,7 +52,7 @@ describe SitePrism::AllThere::RecursionChecker do
       end
     end
 
-    context 'with recursion set to :one' do
+    context 'with recursion' do
       it 'returns `true` for pages that have every item and descendant item present' do
         expect(completely_present.all_there?(recursion: :one)).to be true
       end

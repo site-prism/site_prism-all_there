@@ -10,8 +10,8 @@ AllCops:
 Gemspec/RequireMFA:
   Enabled: false
 
-# This file is in a diff namespace for both lib and spec
-# This is because otherwise we would get a name conflict
+# This file is in a different namespace for both lib and spec
+# This is because otherwise we would get a filename conflict
 RSpec/FilePath:
   Exclude:
     - spec/site_prism/all_there_spec.rb
