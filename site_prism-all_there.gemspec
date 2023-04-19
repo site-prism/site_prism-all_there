@@ -23,7 +23,7 @@ page/section/element structures on your page - exclusively for use with the Site
   s.require_path = 'lib'
 
   s.add_development_dependency 'rspec', ['~> 3.12']
-  s.add_development_dependency 'rubocop', '~> 1.48.1'
+  s.add_development_dependency 'rubocop', '~> 1.50.2'
   s.add_development_dependency 'rubocop-performance', '~> 1.17.1'
   s.add_development_dependency 'rubocop-rspec', '~> 2.19.0'
   s.add_development_dependency 'site_prism', ['> 3.7', '< 5']
