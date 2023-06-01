@@ -64,15 +64,15 @@ module SitePrism
       end
 
       def mapped_checklist
-        if checklist
+        if expected_items
           SitePrism.logger.debug('Expected Items has been set.')
-          mapped_items.array.select { |name| checklist.include?(name) }
+          mapped_items.array.select { |name| expected_items.include?(name) }
         else
           mapped_items.array
         end
       end
 
-      def checklist
+      def expected_items
         instance.class.expected_items
       end
 
