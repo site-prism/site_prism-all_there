@@ -9,9 +9,9 @@
 
 ## [2.0.1] - 2023-06-01
 ### Fixed
-- A few erroneous bits of documentation ([luke-hill] - [#xx])
+- A few erroneous bits of documentation ([luke-hill] - [#51])
 
-- Some redundant bits of code now SitePrism v4 is released ([luke-hill] - [#xx])
+- Some redundant bits of code now SitePrism v4 is released ([luke-hill] - [#51])
 
 ## [2.0] - 2023-03-06
 ### Removed
@@ -157,6 +157,7 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
+[#51]:        https://github.com/site-prism/site_prism-all_there/pull/51
 [#39]:        https://github.com/site-prism/site_prism-all_there/pull/39
 [#34]:        https://github.com/site-prism/site_prism-all_there/pull/34
 [#33]:        https://github.com/site-prism/site_prism-all_there/pull/33
