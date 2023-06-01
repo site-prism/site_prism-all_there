@@ -8,6 +8,9 @@
 ### Fixed
 
 ## [2.0.1] - 2023-06-01
+### Removed
+- A lot of redundant rubocop config has been removed ([luke-hill] - [#51])
+
 ### Fixed
 - A few erroneous bits of documentation ([luke-hill] - [#51])
 
