@@ -7,6 +7,12 @@
 
 ### Fixed
 
+## [2.0.1] - 2023-06-01
+### Fixed
+- A few erroneous bits of documentation ([luke-hill] - [#xx])
+
+- Some redundant bits of code now SitePrism v4 is released ([luke-hill] - [#xx])
+
 ## [2.0] - 2023-03-06
 ### Removed
 - A huge amount of testing scaffolding is now removed ([luke-hill] - [#30])
@@ -133,7 +139,8 @@
 - Base code from site_prism repo ([luke-hill])
 
 <!-- Releases -->
-[main]:       https://github.com/site-prism/site_prism-all_there/compare/v2.0...main
+[main]:       https://github.com/site-prism/site_prism-all_there/compare/v2.0.1...main
+[2.0.1]:      https://github.com/site-prism/site_prism-all_there/compare/v2.0...v2.0.1
 [2.0]:        https://github.com/site-prism/site_prism-all_there/compare/v1.1...v2.0
 [1.1]:        https://github.com/site-prism/site_prism-all_there/compare/v1.0.1...v1.1
 [1.0.1]:      https://github.com/site-prism/site_prism-all_there/compare/v1.0...v1.0.1
