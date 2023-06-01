@@ -65,7 +65,7 @@
 - Bumped internal rubocop dev requirement from `0.73` to `0.75` ([luke-hill])
 
 ### Fixed
-- Fixed an issue where `ExpectedItems` wasn't added to the gems load path ([luke-hill] - [#12])
+- Fixed an issue where `ExpectedItems` wasn't added to the gems load path ([luke-hill] - [#13])
 
 ## [0.3] - 2019-09-05
 ### Added
@@ -150,4 +150,4 @@
 [#22]:        https://github.com/site-prism/site_prism-all_there/pull/22
 [#21]:        https://github.com/site-prism/site_prism-all_there/pull/21
 [#20]:        https://github.com/site-prism/site_prism-all_there/pull/20
-[#12]:        https://github.com/site-prism/site_prism-all_there/issues/12
+[#13]:        https://github.com/site-prism/site_prism-all_there/pull/13
