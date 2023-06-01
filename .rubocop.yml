@@ -24,13 +24,3 @@ RSpec/MessageSpies:
 Style/RegexpLiteral:
   EnforcedStyle: slashes
   AllowInnerSlashes: true
-
-# This is a style used in the codebase to reduce diff deltas
-Style/TrailingCommaInArrayLiteral:
-  EnforcedStyleForMultiline: comma
-  Enabled: true
-
-# This is a style used in the codebase to reduce diff deltas
-Style/TrailingCommaInHashLiteral:
-  EnforcedStyleForMultiline: comma
-  Enabled: true

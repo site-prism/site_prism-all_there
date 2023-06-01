@@ -14,7 +14,7 @@ Gem::Specification.new do |s|
   s.metadata = {
     'bug_tracker_uri' => 'https://github.com/site-prism/site_prism-all_there/issues',
     'changelog_uri' => 'https://github.com/site-prism/site_prism-all_there/blob/main/CHANGELOG.md',
-    'source_code_uri' => 'https://github.com/site-prism/site_prism-all_there',
+    'source_code_uri' => 'https://github.com/site-prism/site_prism-all_there'
   }
   s.summary     = 'An extension to allow you to recurse through your SitePrism Pages/Sections'
   s.description = 'SitePrism AllThere gives you a simple DSL in order to recursively query,
