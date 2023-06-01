@@ -24,7 +24,7 @@ module SitePrism
       # @return [Hash<Symbol>]
       # All expected mapped items on the SitePrism instance as a Symbol Hash
       def hash
-        instance.class.mapped_items(legacy: false)
+        instance.class.mapped_items
       end
     end
   end

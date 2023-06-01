@@ -19,23 +19,3 @@ RSpec/FilePath:
 # The format of this allows the specs to flow a bit better
 RSpec/MessageSpies:
   EnforcedStyle: receive
-
-# See: https://github.com/rubocop-hq/rubocop/issues/5953
-# Bug in the way rubocop uses this specific cop
-Style/AccessModifierDeclarations:
-  Enabled: false
-
-# This is a "better" style used in the codebase
-Style/RegexpLiteral:
-  EnforcedStyle: slashes
-  AllowInnerSlashes: true
-
-# This is a style used in the codebase to reduce diff deltas
-Style/TrailingCommaInArrayLiteral:
-  EnforcedStyleForMultiline: comma
-  Enabled: true
-
-# This is a style used in the codebase to reduce diff deltas
-Style/TrailingCommaInHashLiteral:
-  EnforcedStyleForMultiline: comma
-  Enabled: true

@@ -16,9 +16,8 @@ module SitePrism
       end
 
       # @return [Boolean]
-      # This currently defaults to perform a recursion of depth +:one+
-      # It will be refactored to use either no input, +:none+, or +:one+ as the
-      # regular repo uses currently
+      # This currently defaults to perform a recursion of depth +:one+ (From the main `site_prism` gem)
+      # It will be refactored to use either no input, +:none+, or +:one+ as the regular repo uses currently
       def all_there?(recursion:)
         recursion = SitePrism.recursion_setting if SitePrism.recursion_setting
 
