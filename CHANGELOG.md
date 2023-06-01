@@ -1,9 +1,18 @@
 ## [main] - Unreleased
 ### Removed
+
+### Added
+
+### Changed
+
+### Fixed
+
+## [2.0] - 2023-03-06
+### Removed
 - A huge amount of testing scaffolding is now removed ([luke-hill] - [#30])
 
 ### Added
-- A huge amount of working documentation for using the gem and recursing through objects ([luke-hill] - [#33])
+- Updated the documentation for using the gem and recursing through objects ([luke-hill] - [#33])
 
 - CI now tests against Ruby 3.2 ([luke-hill] - [#34])
 
@@ -17,6 +26,7 @@
     ([luke-hill] - [#33])
 
 ### Fixed
+- CI build issue where duplicate builds would occur ([luke-hill] - [#39])
 
 ## [1.1] - 2022-12-07
 ### Changed
@@ -123,7 +133,8 @@
 - Base code from site_prism repo ([luke-hill])
 
 <!-- Releases -->
-[main]:       https://github.com/site-prism/site_prism-all_there/compare/v1.1...main
+[main]:       https://github.com/site-prism/site_prism-all_there/compare/v2.0...main
+[2.0]:        https://github.com/site-prism/site_prism-all_there/compare/v1.1...v2.0
 [1.1]:        https://github.com/site-prism/site_prism-all_there/compare/v1.0.1...v1.1
 [1.0.1]:      https://github.com/site-prism/site_prism-all_there/compare/v1.0...v1.0.1
 [1.0]:        https://github.com/site-prism/site_prism-all_there/compare/v0.3.2...v1.0
@@ -139,6 +150,7 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
+[#39]:        https://github.com/site-prism/site_prism-all_there/pull/39
 [#34]:        https://github.com/site-prism/site_prism-all_there/pull/34
 [#33]:        https://github.com/site-prism/site_prism-all_there/pull/33
 [#30]:        https://github.com/site-prism/site_prism-all_there/pull/30
