@@ -19,8 +19,3 @@ RSpec/FilePath:
 # The format of this allows the specs to flow a bit better
 RSpec/MessageSpies:
   EnforcedStyle: receive
-
-# This is a "better" style used in the codebase
-Style/RegexpLiteral:
-  EnforcedStyle: slashes
-  AllowInnerSlashes: true
