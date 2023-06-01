@@ -20,11 +20,6 @@ RSpec/FilePath:
 RSpec/MessageSpies:
   EnforcedStyle: receive
 
-# See: https://github.com/rubocop-hq/rubocop/issues/5953
-# Bug in the way rubocop uses this specific cop
-Style/AccessModifierDeclarations:
-  Enabled: false
-
 # This is a "better" style used in the codebase
 Style/RegexpLiteral:
   EnforcedStyle: slashes
