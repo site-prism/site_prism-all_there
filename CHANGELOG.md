@@ -4,6 +4,7 @@
 ### Added
 
 ### Changed
+- Optimisation: Used array intersection instead of selection for Item Mapper ([luke-hill] - [#52])
 
 ### Fixed
 
@@ -160,6 +161,7 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
+[#52]:        https://github.com/site-prism/site_prism-all_there/pull/52
 [#51]:        https://github.com/site-prism/site_prism-all_there/pull/51
 [#39]:        https://github.com/site-prism/site_prism-all_there/pull/39
 [#34]:        https://github.com/site-prism/site_prism-all_there/pull/34
