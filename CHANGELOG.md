@@ -6,6 +6,8 @@
 ### Changed
 - Optimisation: Used array intersection instead of selection for Item Mapper ([luke-hill] - [#52])
 
+- Optimisation: Store `hash` view in `MappedItems` class immediately ([luke-hill] - [#53])
+
 ### Fixed
 
 ## [2.0.1] - 2023-06-01
