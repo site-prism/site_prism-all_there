@@ -9,7 +9,6 @@ module SitePrism
     #
     class MappedItems
       attr_reader :hash
-      private :hash
 
       def initialize(instance)
         @hash = instance.class.mapped_items
