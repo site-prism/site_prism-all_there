@@ -59,8 +59,6 @@ describe SitePrism::AllThere::RecursionChecker do
     end
 
     context 'with pages that are missing some `expected_items` and also missing some descendent items' do
-      let(:checker) { described_class.new(double) }
-
       before do
         allow(checker).to receive(:current_class_all_there?).and_return(false)
         allow(checker).to receive(:section_classes_all_there?).and_return(false)
@@ -77,8 +75,6 @@ describe SitePrism::AllThere::RecursionChecker do
     end
 
     context 'with pages that have all `expected_items` but are missing some descendent items' do
-      let(:checker) { described_class.new(double) }
-
       before do
         allow(checker).to receive(:current_class_all_there?).and_return(true)
         allow(checker).to receive(:section_classes_all_there?).and_return(false)
