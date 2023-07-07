@@ -9,18 +9,10 @@ describe SitePrism::AllThere::RecursionChecker do
     allow(checker).to receive(:sections_classes_all_there?).and_return(true)
   end
 
+  after { SitePrism.recursion_setting = nil }
+
   describe '#all_there?' do
-    after { SitePrism.recursion_setting = nil }
-
-    context 'with pages that have all element, elements, section and sections items present' do
-      let(:checker) { described_class.new(double) }
-
-      before do
-        allow(checker).to receive(:current_class_all_there?).and_return(true)
-        allow(checker).to receive(:section_classes_all_there?).and_return(true)
-        allow(checker).to receive(:sections_classes_all_there?).and_return(true)
-      end
-
+    context 'with pages that have all `expected_items` and descendent items present' do
       it 'returns `true` when checking all items without recursion' do
         expect(checker.all_there?(recursion: :none)).to be true
       end
@@ -66,7 +58,7 @@ describe SitePrism::AllThere::RecursionChecker do
       end
     end
 
-    context 'with pages that do not have all element, elements, section and sections items present' do
+    context 'with pages that are missing some `expected_items` and also missing some descendent items' do
       let(:checker) { described_class.new(double) }
 
       before do
@@ -84,7 +76,7 @@ describe SitePrism::AllThere::RecursionChecker do
       end
     end
 
-    context 'with pages that have some element, elements, section and sections items present' do
+    context 'with pages that have all `expected_items` but are missing some descendent items' do
       let(:checker) { described_class.new(double) }
 
       before do
@@ -102,7 +94,7 @@ describe SitePrism::AllThere::RecursionChecker do
       end
     end
 
-    it 'will not perform any methods if recursion is not valid' do
+    it 'will not perform any methods if recursion parameter is not valid' do
       expect(SitePrism).to receive(:logger).twice.and_call_original
 
       checker.all_there?(recursion: :not_one)
