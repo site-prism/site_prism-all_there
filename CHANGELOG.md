@@ -8,6 +8,8 @@
 
 - Optimisation: Store `hash` view in `MappedItems` class immediately ([luke-hill] - [#53])
 
+- Reordered all specs so that the contexts now switch context instead of sub-method ([luke-hill] - [#54])
+
 ### Fixed
 
 ## [2.0.1] - 2023-06-01
@@ -163,6 +165,8 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
+[#54]:        https://github.com/site-prism/site_prism-all_there/pull/54
+[#53]:        https://github.com/site-prism/site_prism-all_there/pull/53
 [#52]:        https://github.com/site-prism/site_prism-all_there/pull/52
 [#51]:        https://github.com/site-prism/site_prism-all_there/pull/51
 [#39]:        https://github.com/site-prism/site_prism-all_there/pull/39
