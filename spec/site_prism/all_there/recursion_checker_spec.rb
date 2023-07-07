@@ -12,7 +12,7 @@ describe SitePrism::AllThere::RecursionChecker do
   describe '#all_there?' do
     after { SitePrism.recursion_setting = nil }
 
-    context 'for `completely_present` pages' do
+    context 'with pages that have all element, elements, section and sections items present' do
       let(:checker) { described_class.new(double) }
 
       before do
@@ -21,60 +21,52 @@ describe SitePrism::AllThere::RecursionChecker do
         allow(checker).to receive(:sections_classes_all_there?).and_return(true)
       end
 
-      # no recursion
-      it 'returns `true` for pages that have every item and descendant item present' do
+      it 'returns `true` when checking all items without recursion' do
         expect(checker.all_there?(recursion: :none)).to be true
       end
 
-      # no recursion
-      it 'does not perform checks on descendant section items' do
+      it 'does not perform checks on descendant section items without recursion' do
         expect(checker).not_to receive(:section_classes_all_there?)
 
         checker.all_there?(recursion: :none)
       end
 
-      # no recursion
-      it 'does not perform checks on descendant sections items' do
+      it 'does not perform checks on descendant sections items without recursion' do
         expect(checker).not_to receive(:sections_classes_all_there?)
 
         checker.all_there?(recursion: :none)
       end
 
-      # no recursion
-      it 'will check the value of SitePrism.recursion_setting' do
+      it 'always checks the value of SitePrism.recursion_setting' do
         expect(SitePrism).to receive(:recursion_setting)
 
         checker.all_there?(recursion: :none)
       end
 
-      # with recursion
-      it 'returns `true` for pages that have every item and descendant item present' do
+      it 'returns `true` when checking all items with recursion' do
         expect(checker.all_there?(recursion: :one)).to be true
       end
 
-      # with recursion
-      it 'performs checks on the page itself' do
+      it 'performs checks on the page itself with recursion' do
         expect(checker).to receive(:current_class_all_there?)
 
         checker.all_there?(recursion: :one)
       end
 
-      # with recursion
-      it 'performs checks on descendant section items' do
+      it 'performs checks on descendant section items with recursion' do
         expect(checker).to receive(:section_classes_all_there?)
 
         checker.all_there?(recursion: :one)
       end
 
-      # with recursion
-      it 'performs checks on descendant sections items' do
+      it 'performs checks on descendant sections items with recursion' do
         expect(checker).to receive(:sections_classes_all_there?)
 
         checker.all_there?(recursion: :one)
       end
     end
 
-    context 'for `completely_missing` pages' do
+    context 'with pages that do not have all element, elements, section and sections items present' do
       let(:checker) { described_class.new(double) }
 
       before do
@@ -83,18 +75,16 @@ describe SitePrism::AllThere::RecursionChecker do
         allow(checker).to receive(:sections_classes_all_there?).and_return(false)
       end
 
-      # no recursion
-      it 'returns `false` for pages that do not have every item present' do
+      it 'returns `false` when checking all items without recursion' do
         expect(checker.all_there?(recursion: :none)).to be false
       end
 
-      # with recursion
-      it 'returns `false` for pages that do not have every item and descendant item present' do
+      it 'returns `false` when checking all items with recursion' do
         expect(checker.all_there?(recursion: :one)).to be false
       end
     end
 
-    context 'for `partially_present` pages' do
+    context 'with pages that have some element, elements, section and sections items present' do
       let(:checker) { described_class.new(double) }
 
       before do
@@ -103,13 +93,11 @@ describe SitePrism::AllThere::RecursionChecker do
         allow(checker).to receive(:sections_classes_all_there?).and_return(false)
       end
 
-      # no recursion
-      it 'returns `true` for pages that have regular items present BUT NOT descendant items' do
+      it 'returns `true` when checking all items without recursion' do
         expect(checker.all_there?(recursion: :none)).to be true
       end
 
-      # with recursion
-      it 'returns `false` for pages that have regular items present BUT NOT descendant items' do
+      it 'returns `false` when checking all items with recursion' do
         expect(checker.all_there?(recursion: :one)).to be false
       end
     end
