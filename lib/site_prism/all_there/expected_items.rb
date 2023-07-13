@@ -58,9 +58,9 @@ module SitePrism
       end
 
       private
-
+      
       def mapped_checklist_of(type)
-        mapped_items.hash[type]&.select { |name| mapped_checklist.include?(name) }
+        mapped_items.hash[type] & mapped_checklist
       end
 
       def mapped_checklist
