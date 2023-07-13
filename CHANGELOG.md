@@ -4,13 +4,16 @@
 ### Added
 
 ### Changed
+
+### Fixed
+
+## [2.0.2] - 2023-07-13
+### Changed
 - Optimisation: Used array intersection instead of selection for Item Mapper ([luke-hill] - [#52])
 
 - Optimisation: Store `hash` view in `MappedItems` class immediately ([luke-hill] - [#53])
 
 - Reordered all specs so that the contexts now switch context instead of sub-method ([luke-hill] - [#54])
-
-### Fixed
 
 ## [2.0.1] - 2023-06-01
 ### Removed
@@ -147,7 +150,8 @@
 - Base code from site_prism repo ([luke-hill])
 
 <!-- Releases -->
-[main]:       https://github.com/site-prism/site_prism-all_there/compare/v2.0.1...main
+[main]:       https://github.com/site-prism/site_prism-all_there/compare/v2.0.2...main
+[2.0.2]:      https://github.com/site-prism/site_prism-all_there/compare/v2.0.1...v2.0.2
 [2.0.1]:      https://github.com/site-prism/site_prism-all_there/compare/v2.0...v2.0.1
 [2.0]:        https://github.com/site-prism/site_prism-all_there/compare/v1.1...v2.0
 [1.1]:        https://github.com/site-prism/site_prism-all_there/compare/v1.0.1...v1.1
