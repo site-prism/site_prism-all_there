@@ -5,7 +5,7 @@ require './lib/site_prism/all_there/version'
 Gem::Specification.new do |s|
   s.name        = 'site_prism-all_there'
   s.version     = SitePrism::AllThere::VERSION
-  s.required_ruby_version = '>= 2.6'
+  s.required_ruby_version = '>= 2.7'
   s.platform    = Gem::Platform::RUBY
   s.license     = 'BSD-3-Clause'
   s.authors     = ['Luke Hill']
