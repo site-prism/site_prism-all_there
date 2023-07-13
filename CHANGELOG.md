@@ -2,10 +2,12 @@
 ### Removed
 
 ### Added
+- Allow runtime options into `#all_there?` calls ([luke-hill] - [#55])
 
 ### Changed
 
 ### Fixed
+- Erroneous log messages when using `sections` (plural) check in `#all_there?` ([luke-hill] - [#55])
 
 ## [2.0.2] - 2023-07-13
 ### Changed
