@@ -15,14 +15,14 @@ module SitePrism
         @instance = instance
       end
 
-      # @return [Boolean]
-      # This currently defaults to perform a recursion of depth +:one+ (From the main `site_prism` gem)
-      # It will be refactored to use either no input, +:none+, or +:one+ as the regular repo uses currently
-      def all_there?(recursion:)
-        recursion = SitePrism.recursion_setting if SitePrism.recursion_setting
+      # @return [Boolean || Nil]
+      # This currently defaults to not perform recursion when invoked directly ...
+      # It is only meant to be invoked from the main site_prism gem where it will use whatever input it is given
+      def all_there?(recursion: nil)
+        setting = recursion || SitePrism.recursion_setting
 
-        case recursion
-        when :none
+        case setting
+        when nil, :none
           current_class_all_there?
         when :one
           current_class_all_there? && section_classes_all_there? && sections_classes_all_there?
