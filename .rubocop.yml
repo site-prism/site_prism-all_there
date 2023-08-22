@@ -6,6 +6,10 @@ AllCops:
   TargetRubyVersion: 2.7
   NewCops: enable
 
+# We don't use this cop
+Gemspec/DevelopmentDependencies:
+  Enabled: false
+
 # We don't use MFA
 Gemspec/RequireMFA:
   Enabled: false
