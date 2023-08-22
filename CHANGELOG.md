@@ -5,6 +5,7 @@
 - Allow runtime options into `#all_there?` calls ([luke-hill] - [#55])
 
 ### Changed
+- **Required Ruby Version is now 2.7+** ([luke-hill] - [#55])
 
 ### Fixed
 - Erroneous log messages when using `sections` (plural) check in `#all_there?` ([luke-hill] - [#55])
