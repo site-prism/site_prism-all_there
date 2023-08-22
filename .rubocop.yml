@@ -10,6 +10,10 @@ AllCops:
 Gemspec/RequireMFA:
   Enabled: false
 
+# This allows a longer LineLength
+Layout/LineLength:
+  Max: 140
+
 # This file is in a different namespace for both lib and spec
 # This is because otherwise we would get a filename conflict
 RSpec/FilePath:
