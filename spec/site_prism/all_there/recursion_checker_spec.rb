@@ -4,9 +4,12 @@ describe SitePrism::AllThere::RecursionChecker do
   let(:checker) { described_class.new(double) }
 
   before do
-    allow(checker).to receive(:current_class_all_there?).and_return(true)
-    allow(checker).to receive(:section_classes_all_there?).and_return(true)
-    allow(checker).to receive(:sections_classes_all_there?).and_return(true)
+    allow(checker)
+      .to receive_messages(
+        current_class_all_there?: true,
+        section_classes_all_there?: true,
+        sections_classes_all_there?: true
+      )
   end
 
   after { SitePrism.recursion_setting = nil }
@@ -60,9 +63,12 @@ describe SitePrism::AllThere::RecursionChecker do
 
     context 'with pages that are missing some `expected_items` and also missing some descendent items' do
       before do
-        allow(checker).to receive(:current_class_all_there?).and_return(false)
-        allow(checker).to receive(:section_classes_all_there?).and_return(false)
-        allow(checker).to receive(:sections_classes_all_there?).and_return(false)
+        allow(checker)
+          .to receive_messages(
+            current_class_all_there?: false,
+            section_classes_all_there?: false,
+            sections_classes_all_there?: false
+          )
       end
 
       it 'returns `false` when checking all items without recursion' do
@@ -76,9 +82,12 @@ describe SitePrism::AllThere::RecursionChecker do
 
     context 'with pages that have all `expected_items` but are missing some descendent items' do
       before do
-        allow(checker).to receive(:current_class_all_there?).and_return(true)
-        allow(checker).to receive(:section_classes_all_there?).and_return(false)
-        allow(checker).to receive(:sections_classes_all_there?).and_return(false)
+        allow(checker)
+          .to receive_messages(
+            current_class_all_there?: true,
+            section_classes_all_there?: false,
+            sections_classes_all_there?: false
+          )
       end
 
       it 'returns `true` when checking all items without recursion' do
