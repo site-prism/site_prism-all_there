@@ -3,8 +3,9 @@
 module SitePrism
   module AllThere
     #
-    # This will recurse through all of the objects found on an individual Page/Section level
+    # @api private
     #
+    # This will recurse through all of the objects found on an individual Page/Section level
     # It will perform the `#all_there?` check on each `@instance` item that it is initialized with
     #
     class RecursionChecker
@@ -16,8 +17,7 @@ module SitePrism
       end
 
       # @return [Boolean || Nil]
-      # This currently defaults to not perform recursion when invoked directly ...
-      # It is only meant to be invoked from the main site_prism gem where it will use whatever input it is given
+      # This is only meant to be invoked from the main site_prism gem where it will use whatever inputs it is given
       def all_there?(recursion: nil, options: {})
         setting = recursion || SitePrism.recursion_setting
 
