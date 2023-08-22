@@ -69,8 +69,26 @@ describe SitePrism::AllThere::RecursionChecker do
         expect(checker.all_there?(recursion: :none)).to be false
       end
 
+      it 'does not perform checks on descendant section items without recursion' do
+        expect(checker).not_to receive(:section_classes_all_there?)
+
+        checker.all_there?(recursion: :none)
+      end
+
+      it 'does not perform checks on descendant sections items without recursion' do
+        expect(checker).not_to receive(:sections_classes_all_there?)
+
+        checker.all_there?(recursion: :none)
+      end
+
       it 'returns `false` when checking all items with recursion' do
         expect(checker.all_there?(recursion: :one)).to be false
+      end
+
+      it 'performs checks on the page itself with recursion' do
+        expect(checker).to receive(:current_class_all_there?)
+
+        checker.all_there?(recursion: :one)
       end
     end
 
