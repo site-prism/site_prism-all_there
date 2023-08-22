@@ -3,19 +3,19 @@
 describe SitePrism::AllThere::RecursionChecker do
   let(:checker) { described_class.new(double) }
 
+  before do
+    allow(checker)
+      .to receive_messages(
+        current_class_all_there?: true,
+        section_classes_all_there?: true,
+        sections_classes_all_there?: true
+      )
+  end
+
   after { SitePrism.recursion_setting = nil }
 
   describe '#all_there?' do
     context 'with pages that have all `expected_items` and descendent items present' do
-      before do
-        allow(checker)
-          .to receive_messages(
-            current_class_all_there?: true,
-            section_classes_all_there?: true,
-            sections_classes_all_there?: true
-          )
-      end
-
       it 'returns `true` when checking all items without recursion' do
         expect(checker.all_there?(recursion: :none)).to be true
       end
