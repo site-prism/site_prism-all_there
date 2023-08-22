@@ -96,12 +96,12 @@ describe SitePrism::AllThere::RecursionChecker do
       checker.all_there?(recursion: :not_one)
     end
 
-    it 'will take the value of SitePrism.recursion_setting first' do
+    it 'will check the value of SitePrism.recursion_setting when no recursion parameter is passed in' do
       SitePrism.recursion_setting = :one
 
-      expect(SitePrism).not_to receive(:logger)
+      expect(SitePrism).to receive(:recursion_setting).once
 
-      checker.all_there?(recursion: :not_one)
+      checker.all_there?
     end
   end
 end
