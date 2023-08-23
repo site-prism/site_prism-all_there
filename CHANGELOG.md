@@ -5,6 +5,11 @@
 - Allow runtime options into `#all_there?` calls ([luke-hill] - [#55])
 
 ### Changed
+**Breaking Change**:
+- The gem now will implicitly use no recursion if no parameter is provided
+  - Providing no value will then look at the config parameter
+    ([luke-hill] - [#55])
+
 - **Required Ruby Version is now 2.7+** ([luke-hill] - [#55])
 
 ### Fixed
