@@ -3,8 +3,9 @@
 module SitePrism
   module AllThere
     #
-    # This will recurse through all of the objects found on an individual Page/Section level
+    # @api private
     #
+    # This will recurse through all of the objects found on an individual Page/Section level
     # It will perform the `#all_there?` check on each `@instance` item that it is initialized with
     #
     class RecursionChecker
@@ -15,40 +16,39 @@ module SitePrism
         @instance = instance
       end
 
-      # @return [Boolean]
-      # This currently defaults to perform a recursion of depth +:one+ (From the main `site_prism` gem)
-      # It will be refactored to use either no input, +:none+, or +:one+ as the regular repo uses currently
-      def all_there?(recursion:)
-        recursion = SitePrism.recursion_setting if SitePrism.recursion_setting
+      # @return [Boolean || Nil]
+      # This is only meant to be invoked from the main site_prism gem where it will use whatever inputs it is given
+      def all_there?(recursion: nil, options: {})
+        setting = recursion || SitePrism.recursion_setting
 
-        case recursion
-        when :none
-          current_class_all_there?
+        case setting
+        when nil, :none
+          current_class_all_there?(options)
         when :one
-          current_class_all_there? && section_classes_all_there? && sections_classes_all_there?
+          current_class_all_there?(options) && section_classes_all_there?(options) && sections_classes_all_there?(options)
         else
-          SitePrism.logger.debug("Input value '#{recursion}'. Valid values are :none or :one.")
+          SitePrism.logger.debug("Invalid input value '#{recursion}'. Valid values are nil, :none or :one.")
           SitePrism.logger.error('Invalid recursion setting, Will not run #all_there?.')
         end
       end
 
       private
 
-      def current_class_all_there?
-        expected_items.array.flatten.all? { |name| there?(name) }.tap do |result|
+      def current_class_all_there?(**opts)
+        expected_items.array.flatten.all? { |name| there?(name, opts) }.tap do |result|
           SitePrism.logger.info("Result of current_class_all_there?: #{result}")
         end
       end
 
-      def section_classes_all_there?
-        section_classes_to_check.all?(&:all_there?).tap do |result|
+      def section_classes_all_there?(**opts)
+        section_classes_to_check.all? { |section| section.all_there?(opts) }.tap do |result|
           SitePrism.logger.debug("Result of section_classes_all_there?: #{result}")
         end
       end
 
-      def sections_classes_all_there?
-        sections_classes_to_check.flatten.all?(&:all_there?).tap do |result|
-          SitePrism.logger.debug("Result of section_classes_all_there?: #{result}")
+      def sections_classes_all_there?(**opts)
+        sections_classes_to_check.flatten.all? { |section| section.all_there?(opts) }.tap do |result|
+          SitePrism.logger.debug("Result of sections_classes_all_there?: #{result}")
         end
       end
 
@@ -64,8 +64,8 @@ module SitePrism
         @expected_items ||= ExpectedItems.new(instance)
       end
 
-      def there?(name)
-        instance.send("has_#{name}?")
+      def there?(name, **opts)
+        instance.send("has_#{name}?", opts)
       end
     end
   end
