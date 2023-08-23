@@ -10,6 +10,8 @@ module SitePrism
     class MappedItems
       attr_reader :hash
 
+      # @return [Hash]
+      # Return a list of all mapped items on a SitePrism class instance (Page or Section)
       def initialize(instance)
         @hash = instance.class.mapped_items
       end

@@ -2,6 +2,13 @@
 ### Removed
 
 ### Added
+
+### Changed
+
+### Fixed
+
+## [3.0] - 2023-08-23
+### Added
 - Allow runtime options into `#all_there?` calls ([luke-hill] - [#55])
 
 ### Changed
@@ -158,7 +165,8 @@
 - Base code from site_prism repo ([luke-hill])
 
 <!-- Releases -->
-[main]:       https://github.com/site-prism/site_prism-all_there/compare/v2.0.2...main
+[main]:       https://github.com/site-prism/site_prism-all_there/compare/v3.0...main
+[3.0]:        https://github.com/site-prism/site_prism-all_there/compare/v2.0.2...v3.0
 [2.0.2]:      https://github.com/site-prism/site_prism-all_there/compare/v2.0.1...v2.0.2
 [2.0.1]:      https://github.com/site-prism/site_prism-all_there/compare/v2.0...v2.0.1
 [2.0]:        https://github.com/site-prism/site_prism-all_there/compare/v1.1...v2.0
