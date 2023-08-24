@@ -25,7 +25,7 @@ on your page - exclusively for use with the SitePrism gem.'
   s.add_development_dependency 'rspec', ['~> 3.12']
   s.add_development_dependency 'rubocop', ['~> 1.50.2']
   s.add_development_dependency 'rubocop-performance', '~> 1.19.0'
-  s.add_development_dependency 'rubocop-rspec', ['~> 2.20.0']
+  s.add_development_dependency 'rubocop-rspec', '~> 2.23.2'
   s.add_development_dependency 'site_prism', ['~> 4.0']
   s.add_development_dependency 'yard', ['~> 0.9']
 end
