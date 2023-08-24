@@ -23,9 +23,9 @@ module SitePrism
 
         case setting
         when nil, :none
-          current_class_all_there?(options)
+          current_class_all_there?(**options)
         when :one
-          current_class_all_there?(options) && section_classes_all_there?(options) && sections_classes_all_there?(options)
+          current_class_all_there?(**options) && section_classes_all_there?(**options) && sections_classes_all_there?(**options)
         else
           SitePrism.logger.debug("Invalid input value '#{recursion}'. Valid values are nil, :none or :one.")
           SitePrism.logger.error('Invalid recursion setting, Will not run #all_there?.')
@@ -35,19 +35,19 @@ module SitePrism
       private
 
       def current_class_all_there?(**opts)
-        expected_items.array.flatten.all? { |name| there?(name, opts) }.tap do |result|
+        expected_items.array.flatten.all? { |name| there?(name, **opts) }.tap do |result|
           SitePrism.logger.info("Result of current_class_all_there?: #{result}")
         end
       end
 
       def section_classes_all_there?(**opts)
-        section_classes_to_check.all? { |section| section.all_there?(opts) }.tap do |result|
+        section_classes_to_check.all? { |section| section.all_there?(**opts) }.tap do |result|
           SitePrism.logger.debug("Result of section_classes_all_there?: #{result}")
         end
       end
 
       def sections_classes_all_there?(**opts)
-        sections_classes_to_check.flatten.all? { |section| section.all_there?(opts) }.tap do |result|
+        sections_classes_to_check.flatten.all? { |section| section.all_there?(**opts) }.tap do |result|
           SitePrism.logger.debug("Result of sections_classes_all_there?: #{result}")
         end
       end
@@ -65,7 +65,7 @@ module SitePrism
       end
 
       def there?(name, **opts)
-        instance.send("has_#{name}?", opts)
+        instance.send("has_#{name}?", **opts)
       end
     end
   end
