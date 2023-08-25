@@ -21,6 +21,10 @@ The gem methods are now (by default), enabled with `site_prism` version 4 and ab
 
 ## Usage
 
+You can configure the recursion either using an in-line parameter named `recursion` or using the global setting
+
+When using both it will always look for the in-line parameter first
+
 ### In-line configuration
 
 ```rb
@@ -51,8 +55,6 @@ your_page.all_there?(recursion: :ignore) # This will do the standard `#all_there
 Then you can perform the above checks using the global config.
 
 ## Troubleshooting
-
-**Mixing and matching the global config won't work - To come in v3!**
 
 Happy Testing / Developing!
 
