@@ -9,7 +9,7 @@
 
 ## [3.0.1] - 2023-08-24
 ### Changed
-- Update rubocop in dev dependencies ([luke-hill] - [#60])
+- Update rubocop and associated sub-gems in dev dependencies ([luke-hill] - [#58] / [#59] / [#60])
 
 ### Fixed
 - Correctly hashify all args being passed into `#all_there?` ([luke-hill] - [#61])
@@ -172,7 +172,8 @@
 - Base code from site_prism repo ([luke-hill])
 
 <!-- Releases -->
-[main]:       https://github.com/site-prism/site_prism-all_there/compare/v3.0...main
+[main]:       https://github.com/site-prism/site_prism-all_there/compare/v3.0.1...main
+[3.0.1]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0...v3.0.1
 [3.0]:        https://github.com/site-prism/site_prism-all_there/compare/v2.0.2...v3.0
 [2.0.2]:      https://github.com/site-prism/site_prism-all_there/compare/v2.0.1...v2.0.2
 [2.0.1]:      https://github.com/site-prism/site_prism-all_there/compare/v2.0...v2.0.1
@@ -194,6 +195,8 @@
 <!-- Issue/PR References to the repo -->
 [#61]:        https://github.com/site-prism/site_prism-all_there/pull/61
 [#60]:        https://github.com/site-prism/site_prism-all_there/pull/60
+[#59]:        https://github.com/site-prism/site_prism-all_there/pull/59
+[#58]:        https://github.com/site-prism/site_prism-all_there/pull/58
 [#55]:        https://github.com/site-prism/site_prism-all_there/pull/55
 [#54]:        https://github.com/site-prism/site_prism-all_there/pull/54
 [#53]:        https://github.com/site-prism/site_prism-all_there/pull/53
