@@ -22,7 +22,7 @@ The gem methods are enabled by default. No configuration is required!
 
 You can configure the recursion either using an in-line parameter named `recursion` or using a global setting
 
-When using both it will always look for the in-line parameter first
+When using both it will always look for the in-line parameter **first**
 
 ### In-line parameter
 
