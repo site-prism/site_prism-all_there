@@ -18,9 +18,16 @@ Gemspec/RequireMFA:
 Layout/LineLength:
   Max: 140
 
+# Deprecated: Remove in rubocop-rspec v3
 # This file is in a different namespace for both lib and spec
 # This is because otherwise we would get a filename conflict
 RSpec/FilePath:
+  Exclude:
+    - spec/site_prism/all_there_spec.rb
+
+# This file is in a different namespace for both lib and spec
+# This is because otherwise we would get a filename conflict
+RSpec/SpecFilePathFormat:
   Exclude:
     - spec/site_prism/all_there_spec.rb
 
