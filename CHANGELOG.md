@@ -16,18 +16,18 @@
 
 ## [3.0] - 2023-08-23
 ### Added
-- Allow runtime options into `#all_there?` calls ([luke-hill] - [#55])
+- Allow runtime options into `#all_there?` calls ([luke-hill] - [#56])
 
 ### Changed
 **Breaking Change**:
 - The gem now will implicitly use no recursion if no parameter is provided
   - Providing no value will then look at the config parameter
-    ([luke-hill] - [#55])
+    ([luke-hill] - [#56])
 
-- **Required Ruby Version is now 2.7+** ([luke-hill] - [#55])
+- **Required Ruby Version is now 2.7+** ([luke-hill] - [#56])
 
 ### Fixed
-- Erroneous log messages when using `sections` (plural) check in `#all_there?` ([luke-hill] - [#55])
+- Erroneous log messages when using `sections` (plural) check in `#all_there?` ([luke-hill] - [#56])
 
 ## [2.0.2] - 2023-07-13
 ### Changed
@@ -197,7 +197,7 @@
 [#60]:        https://github.com/site-prism/site_prism-all_there/pull/60
 [#59]:        https://github.com/site-prism/site_prism-all_there/pull/59
 [#58]:        https://github.com/site-prism/site_prism-all_there/pull/58
-[#55]:        https://github.com/site-prism/site_prism-all_there/pull/55
+[#56]:        https://github.com/site-prism/site_prism-all_there/pull/56
 [#54]:        https://github.com/site-prism/site_prism-all_there/pull/54
 [#53]:        https://github.com/site-prism/site_prism-all_there/pull/53
 [#52]:        https://github.com/site-prism/site_prism-all_there/pull/52
