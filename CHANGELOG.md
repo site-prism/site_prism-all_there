@@ -4,6 +4,7 @@
 ### Added
 
 ### Changed
+- Updated dev dependencies including permitting the v5 series of `site_prism` ([luke-hill] - [#69])
 
 ### Fixed
 
@@ -172,7 +173,7 @@
 - Base code from site_prism repo ([luke-hill])
 
 <!-- Releases -->
-[main]:       https://github.com/site-prism/site_prism-all_there/compare/v3.0.1...main
+[main]:       https://github.com/site-prism/site_prism-all_there/compare/v3.0.1...HEAD
 [3.0.1]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0...v3.0.1
 [3.0]:        https://github.com/site-prism/site_prism-all_there/compare/v2.0.2...v3.0
 [2.0.2]:      https://github.com/site-prism/site_prism-all_there/compare/v2.0.1...v2.0.2
@@ -193,6 +194,7 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
+[#69]:        https://github.com/site-prism/site_prism-all_there/pull/69
 [#61]:        https://github.com/site-prism/site_prism-all_there/pull/61
 [#60]:        https://github.com/site-prism/site_prism-all_there/pull/60
 [#59]:        https://github.com/site-prism/site_prism-all_there/pull/59
