@@ -4,9 +4,15 @@
 ### Added
 
 ### Changed
+
+### Fixed
+
+## [3.0.2] - 2023-11-13
+### Changed
 - Updated dev dependencies including permitting the v5 series of `site_prism` ([luke-hill] - [#69])
 
 ### Fixed
+- Correctly log interim `#all_there?` methods at correct level (debug only) ([luke-hill] - [#70])
 
 ## [3.0.1] - 2023-08-24
 ### Changed
@@ -173,7 +179,8 @@
 - Base code from site_prism repo ([luke-hill])
 
 <!-- Releases -->
-[main]:       https://github.com/site-prism/site_prism-all_there/compare/v3.0.1...HEAD
+[main]:       https://github.com/site-prism/site_prism-all_there/compare/v3.0.2...HEAD
+[3.0.2]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0.1...v3.0.2
 [3.0.1]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0...v3.0.1
 [3.0]:        https://github.com/site-prism/site_prism-all_there/compare/v2.0.2...v3.0
 [2.0.2]:      https://github.com/site-prism/site_prism-all_there/compare/v2.0.1...v2.0.2
@@ -194,6 +201,7 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
+[#70]:        https://github.com/site-prism/site_prism-all_there/pull/70
 [#69]:        https://github.com/site-prism/site_prism-all_there/pull/69
 [#61]:        https://github.com/site-prism/site_prism-all_there/pull/61
 [#60]:        https://github.com/site-prism/site_prism-all_there/pull/60

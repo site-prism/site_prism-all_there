@@ -27,7 +27,7 @@ module SitePrism
         when :one
           current_class_all_there?(**options) && section_classes_all_there?(**options) && sections_classes_all_there?(**options)
         else
-          SitePrism.logger.debug("Invalid input value '#{recursion}'. Valid values are nil, :none or :one.")
+          SitePrism.logger.debug("Invalid input value '#{recursion}'. Valid values are 'nil', ':none' or ':one'.")
           SitePrism.logger.error('Invalid recursion setting, Will not run #all_there?.')
         end
       end
@@ -36,7 +36,7 @@ module SitePrism
 
       def current_class_all_there?(**opts)
         expected_items.array.flatten.all? { |name| there?(name, **opts) }.tap do |result|
-          SitePrism.logger.info("Result of current_class_all_there?: #{result}")
+          SitePrism.logger.debug("Result of current_class_all_there?: #{result}")
         end
       end
 
