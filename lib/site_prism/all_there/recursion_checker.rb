@@ -36,7 +36,7 @@ module SitePrism
 
       def current_class_all_there?(**opts)
         expected_items.array.flatten.all? { |name| there?(name, **opts) }.tap do |result|
-          SitePrism.logger.info("Result of current_class_all_there?: #{result}")
+          SitePrism.logger.debug("Result of current_class_all_there?: #{result}")
         end
       end
 
