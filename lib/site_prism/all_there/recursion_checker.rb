@@ -45,7 +45,7 @@ module SitePrism
           SitePrism.logger.debug("Result of section_classes_all_there?: #{result}")
         end
       rescue Capybara::ElementNotFound
-        SitePrism.logger.error("Error whilst attempting to locate all section classes from within #{self.class}")
+        SitePrism.logger.error("Error whilst attempting to locate all section classes from within #{instance.class}")
         false
       end
 
@@ -54,7 +54,7 @@ module SitePrism
           SitePrism.logger.debug("Result of sections_classes_all_there?: #{result}")
         end
       rescue Capybara::ElementNotFound
-        SitePrism.logger.error("Error whilst attempting to locate all sections (plural), classes from within #{self.class}")
+        SitePrism.logger.error("Error whilst attempting to locate all sections (plural), classes from within #{instance.class}")
         false
       end
 
