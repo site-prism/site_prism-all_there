@@ -44,12 +44,18 @@ module SitePrism
         section_classes_to_check.all? { |section| section.all_there?(**opts) }.tap do |result|
           SitePrism.logger.debug("Result of section_classes_all_there?: #{result}")
         end
+      rescue Capybara::ElementNotFound
+        SitePrism.logger.error("Error whilst attempting to locate all section classes from within #{instance.class}")
+        false
       end
 
       def sections_classes_all_there?(**opts)
         sections_classes_to_check.flatten.all? { |section| section.all_there?(**opts) }.tap do |result|
           SitePrism.logger.debug("Result of sections_classes_all_there?: #{result}")
         end
+      rescue Capybara::ElementNotFound
+        SitePrism.logger.error("Error whilst attempting to locate all sections (plural), classes from within #{instance.class}")
+        false
       end
 
       def section_classes_to_check

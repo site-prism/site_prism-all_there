@@ -6,6 +6,7 @@
 ### Changed
 
 ### Fixed
+- Handle situation where `instance.section` calls fail when using recursion with `#all_there?` ([luke-hill] - [#72])
 
 ## [3.0.2] - 2023-11-13
 ### Changed
@@ -201,6 +202,7 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
+[#72]:        https://github.com/site-prism/site_prism-all_there/pull/72
 [#70]:        https://github.com/site-prism/site_prism-all_there/pull/70
 [#69]:        https://github.com/site-prism/site_prism-all_there/pull/69
 [#61]:        https://github.com/site-prism/site_prism-all_there/pull/61
