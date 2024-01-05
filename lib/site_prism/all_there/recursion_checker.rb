@@ -71,7 +71,7 @@ module SitePrism
       end
 
       def there?(name, **opts)
-        instance.send("has_#{name}?", **opts)
+        instance.send(:"has_#{name}?", **opts)
       end
     end
   end
