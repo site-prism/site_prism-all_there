@@ -23,7 +23,7 @@ on your page - exclusively for use with the SitePrism gem.'
   s.require_path = 'lib'
 
   s.add_development_dependency 'rspec', '~> 3.12'
-  s.add_development_dependency 'rubocop', '~> 1.58.0'
+  s.add_development_dependency 'rubocop', '~> 1.59.0'
   s.add_development_dependency 'rubocop-performance', '~> 1.19.1'
   s.add_development_dependency 'rubocop-rspec', '~> 2.25.0'
   s.add_development_dependency 'site_prism', '> 4', '< 6'
