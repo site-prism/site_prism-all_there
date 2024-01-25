@@ -111,13 +111,13 @@ describe SitePrism::AllThere::RecursionChecker do
       end
     end
 
-    it 'will not perform any methods if recursion parameter is not valid' do
+    it 'performs no checks if the recursion parameter is not valid' do
       expect(SitePrism).to receive(:logger).twice.and_call_original
 
       checker.all_there?(recursion: :not_one)
     end
 
-    it 'will check the value of SitePrism.recursion_setting when no recursion parameter is passed in' do
+    it 'checks the value of `SitePrism.recursion_setting` when no recursion parameter is passed in' do
       SitePrism.recursion_setting = :one
 
       expect(SitePrism).to receive(:recursion_setting).once
