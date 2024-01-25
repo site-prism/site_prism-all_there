@@ -4,6 +4,7 @@
 ### Added
 
 ### Changed
+- Updated CI to test Ruby 3.3 and use latest bundler ([luke-hill] - [#80])
 
 ### Fixed
 
@@ -206,6 +207,7 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
+[#80]:        https://github.com/site-prism/site_prism-all_there/pull/80
 [#72]:        https://github.com/site-prism/site_prism-all_there/pull/72
 [#70]:        https://github.com/site-prism/site_prism-all_there/pull/70
 [#69]:        https://github.com/site-prism/site_prism-all_there/pull/69
