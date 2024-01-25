@@ -4,7 +4,11 @@
 ### Added
 
 ### Changed
+- Updated CI to test Ruby 3.3 and use latest bundler ([luke-hill] - [#80])
 
+### Fixed
+
+## [3.0.3] - 2024-01-05
 ### Fixed
 - Handle situation where `instance.section` calls fail when using recursion with `#all_there?` ([luke-hill] - [#72])
 
@@ -180,7 +184,8 @@
 - Base code from site_prism repo ([luke-hill])
 
 <!-- Releases -->
-[main]:       https://github.com/site-prism/site_prism-all_there/compare/v3.0.2...HEAD
+[main]:       https://github.com/site-prism/site_prism-all_there/compare/v3.0.3...HEAD
+[3.0.3]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0.2...v3.0.3
 [3.0.2]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0.1...v3.0.2
 [3.0.1]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0...v3.0.1
 [3.0]:        https://github.com/site-prism/site_prism-all_there/compare/v2.0.2...v3.0
@@ -202,6 +207,7 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
+[#80]:        https://github.com/site-prism/site_prism-all_there/pull/80
 [#72]:        https://github.com/site-prism/site_prism-all_there/pull/72
 [#70]:        https://github.com/site-prism/site_prism-all_there/pull/70
 [#69]:        https://github.com/site-prism/site_prism-all_there/pull/69
