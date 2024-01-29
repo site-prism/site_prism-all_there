@@ -5,6 +5,7 @@
 
 ### Changed
 - Updated CI to test Ruby 3.3 and use latest bundler ([luke-hill] - [#80])
+- Logs for all_there? sub checks are now scoped to show which base class they're being executed from ([luke-hill] - [#82])
 
 ### Fixed
 
@@ -207,6 +208,7 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
+[#82]:        https://github.com/site-prism/site_prism-all_there/pull/82
 [#80]:        https://github.com/site-prism/site_prism-all_there/pull/80
 [#72]:        https://github.com/site-prism/site_prism-all_there/pull/72
 [#70]:        https://github.com/site-prism/site_prism-all_there/pull/70
