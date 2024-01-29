@@ -36,13 +36,13 @@ module SitePrism
 
       def current_class_all_there?(**opts)
         expected_items.array.flatten.all? { |name| there?(name, **opts) }.tap do |result|
-          SitePrism.logger.debug("Result of current_class_all_there?: #{result}")
+          SitePrism.logger.debug("Result of current_class_all_there? for #{instance.class}: #{result}")
         end
       end
 
       def section_classes_all_there?(**opts)
         section_classes_to_check.all? { |section| section.all_there?(**opts) }.tap do |result|
-          SitePrism.logger.debug("Result of section_classes_all_there?: #{result}")
+          SitePrism.logger.debug("Result of section_classes_all_there? for #{instance.class}: #{result}")
         end
       rescue Capybara::ElementNotFound
         SitePrism.logger.error("Error whilst attempting to locate all section classes from within #{instance.class}")
@@ -51,7 +51,7 @@ module SitePrism
 
       def sections_classes_all_there?(**opts)
         sections_classes_to_check.flatten.all? { |section| section.all_there?(**opts) }.tap do |result|
-          SitePrism.logger.debug("Result of sections_classes_all_there?: #{result}")
+          SitePrism.logger.debug("Result of sections_classes_all_there? for #{instance.class}: #{result}")
         end
       rescue Capybara::ElementNotFound
         SitePrism.logger.error("Error whilst attempting to locate all sections (plural), classes from within #{instance.class}")
