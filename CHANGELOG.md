@@ -4,10 +4,17 @@
 ### Added
 
 ### Changed
-- Updated CI to test Ruby 3.3 and use latest bundler ([luke-hill] - [#80])
-- Logs for `#all_there?` sub checks are now scoped to show which base class they're being executed from ([luke-hill] - [#82])
 
 ### Fixed
+
+## [main] - Unreleased
+### Added
+- Security policy for repo ([luke-hill])
+
+### Changed
+- Updated CI to test Ruby 3.3 and use latest bundler ([luke-hill] - [#80])
+- Logs for `#all_there?` sub checks are now scoped to show which base class they're being executed from ([luke-hill] - [#82])
+- Updated some rubocop subgems for internal testing (Partially up to date) ([luke-hill])
 
 ## [3.0.3] - 2024-01-05
 ### Fixed
@@ -185,7 +192,8 @@
 - Base code from site_prism repo ([luke-hill])
 
 <!-- Releases -->
-[main]:       https://github.com/site-prism/site_prism-all_there/compare/v3.0.3...HEAD
+[main]:       https://github.com/site-prism/site_prism-all_there/compare/v3.0.4...HEAD
+[3.0.4]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0.3...v3.0.4
 [3.0.3]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0.2...v3.0.3
 [3.0.2]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0.1...v3.0.2
 [3.0.1]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0...v3.0.1
