@@ -5,7 +5,7 @@
 
 ### Changed
 - Updated CI to test Ruby 3.3 and use latest bundler ([luke-hill] - [#80])
-- Logs for all_there? sub checks are now scoped to show which base class they're being executed from ([luke-hill] - [#82])
+- Logs for `#all_there?` sub checks are now scoped to show which base class they're being executed from ([luke-hill] - [#82])
 
 ### Fixed
 
