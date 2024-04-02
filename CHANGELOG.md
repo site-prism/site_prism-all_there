@@ -7,7 +7,7 @@
 
 ### Fixed
 
-## [main] - Unreleased
+## [3.0.4] - 2024-04-02
 ### Added
 - Security policy for repo ([luke-hill])
 
