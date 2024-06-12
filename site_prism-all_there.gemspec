@@ -22,7 +22,7 @@ on your page - exclusively for use with the SitePrism gem.'
   s.files        = Dir.glob('lib/**/*') + %w[LICENSE.md README.md]
   s.require_path = 'lib'
 
-  s.add_development_dependency 'rspec', '~> 3.12'
+  s.add_development_dependency 'rspec', '~> 3.13'
   s.add_development_dependency 'rubocop', '~> 1.64.0'
   s.add_development_dependency 'rubocop-performance', '~> 1.21.0'
   s.add_development_dependency 'rubocop-rspec', '~> 2.31.0'
