@@ -7,6 +7,10 @@
 
 ### Fixed
 
+## [3.0.5] - 2024-06-13
+### Changed
+- Minor documentation tweaks (No code facing changes)
+
 ## [3.0.4] - 2024-04-02
 ### Added
 - Security policy for repo ([luke-hill])
