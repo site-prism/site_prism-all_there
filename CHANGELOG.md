@@ -7,6 +7,10 @@
 
 ### Fixed
 
+## [3.0.6] - 2024-12-20
+### Fixed
+- Fixed passing arguments into `#all_there?` failing for anything other than the recursion parameter
+  - This fixes the issue of passing in runtime arguments like waiters or text finders to `#all_there?` when recursing ([luke-hill])
 ## [3.0.5] - 2024-06-13
 ### Changed
 - Minor documentation tweaks (No code facing changes)
