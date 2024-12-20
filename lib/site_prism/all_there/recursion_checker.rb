@@ -25,7 +25,7 @@ module SitePrism
         when nil, :none
           current_class_all_there?(**options)
         when :one
-          current_class_all_there?(**options) && section_classes_all_there?(**options) && sections_classes_all_there?(**options)
+          current_class_all_there?(**options) && section_classes_all_there?(options) && sections_classes_all_there?(options)
         else
           SitePrism.logger.debug("Invalid input value '#{recursion}'. Valid values are 'nil', ':none' or ':one'.")
           SitePrism.logger.error('Invalid recursion setting, Will not run #all_there?.')
@@ -40,18 +40,18 @@ module SitePrism
         end
       end
 
-      def section_classes_all_there?(**opts)
-        section_classes_to_check.all? { |section| section.all_there?(**opts) }.tap do |result|
-          SitePrism.logger.debug("Result of section_classes_all_there? for #{instance.class}: #{result}")
+      def section_classes_all_there?(opts)
+        section_classes_to_check.all? { |section| section.all_there?(options: opts) }.tap do |result|
+          SitePrism.logger.debug("Result of #section_classes_all_there? for #{instance.class}: #{result}")
         end
       rescue Capybara::ElementNotFound
         SitePrism.logger.error("Error whilst attempting to locate all section classes from within #{instance.class}")
         false
       end
 
-      def sections_classes_all_there?(**opts)
-        sections_classes_to_check.flatten.all? { |section| section.all_there?(**opts) }.tap do |result|
-          SitePrism.logger.debug("Result of sections_classes_all_there? for #{instance.class}: #{result}")
+      def sections_classes_all_there?(opts)
+        sections_classes_to_check.flatten.all? { |section| section.all_there?(options: opts) }.tap do |result|
+          SitePrism.logger.debug("Result of #sections_classes_all_there? for #{instance.class}: #{result}")
         end
       rescue Capybara::ElementNotFound
         SitePrism.logger.error("Error whilst attempting to locate all sections (plural), classes from within #{instance.class}")
