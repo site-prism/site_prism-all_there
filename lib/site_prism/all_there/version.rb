@@ -4,6 +4,6 @@ module SitePrism
   module AllThere
     # @return [String]
     # Version of the gem
-    VERSION = '3.0.5'
+    VERSION = '3.0.6'
   end
 end

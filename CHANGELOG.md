@@ -9,8 +9,9 @@
 
 ## [3.0.6] - 2024-12-20
 ### Fixed
-- Fixed passing arguments into `#all_there?` failing for anything other than the recursion parameter
-  - This fixes the issue of passing in runtime arguments like waiters or text finders to `#all_there?` when recursing ([luke-hill])
+- Fixed passing arguments into `#all_there?` failing for anything other than the recursion parameter ([luke-hill])
+  - This fixes the issue of passing in runtime arguments like waiters or text finders to `#all_there?` when recursing
+
 ## [3.0.5] - 2024-06-13
 ### Changed
 - Minor documentation tweaks (No code facing changes)
@@ -200,7 +201,9 @@
 - Base code from site_prism repo ([luke-hill])
 
 <!-- Releases -->
-[main]:       https://github.com/site-prism/site_prism-all_there/compare/v3.0.4...HEAD
+[main]:       https://github.com/site-prism/site_prism-all_there/compare/v3.0.6...HEAD
+[3.0.6]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0.5...v3.0.6
+[3.0.5]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0.4...v3.0.5
 [3.0.4]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0.3...v3.0.4
 [3.0.3]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0.2...v3.0.3
 [3.0.2]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0.1...v3.0.2
