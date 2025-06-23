@@ -1,28 +1,23 @@
 # site_prism-all_there
+
 - [History](#history)
-- [Enabling gem methods](#enabling-gem-methods)
 - [Usage](#usage)
   - [In-line parameter](#in-line-parameter)
   - [Global setting](#global-setting)
 
 ## History
 
-This in the breakout gem from SitePrism to perform recursion checks for `#all_there?`
+This is the breakout gem from SitePrism to perform recursion checks in the `#all_there?` method
 
-This gem is a breakout of the current `SitePrism::Page#all_there?` and `SitePrism::Section#all_there?`
-methods which have existed in site_prism since v2
+This gem is a breakout from `SitePrism::Page#all_there?` and `SitePrism::Section#all_there?` methods from site_prism v2
 
-The gem is version stable. It is default functionality in `site_prism` v4 and above
-
-## Enabling gem methods
-
-The gem methods are enabled by default. No configuration is required!
+The gem is version stable. It is default enabled in `site_prism` v4 and above, no configuration is required!
 
 ## Usage
 
-You can configure the recursion either using an in-line parameter named `recursion` or using a global setting
+You can perform recursion either using an in-line keyword arg `recursion` or using a global setting
 
-When using both it will always look for the in-line parameter **first**
+When using both it will always look **first** for an in-line parameter
 
 ### In-line parameter
 
