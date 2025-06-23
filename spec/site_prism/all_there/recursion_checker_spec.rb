@@ -4,12 +4,7 @@ describe SitePrism::AllThere::RecursionChecker do
   let(:checker) { described_class.new(double) }
 
   before do
-    allow(checker)
-      .to receive_messages(
-        current_class_all_there?: true,
-        section_classes_all_there?: true,
-        sections_classes_all_there?: true
-      )
+    allow(checker).to receive_messages(current_class_all_there?: true, section_classes_all_there?: true, sections_classes_all_there?: true)
   end
 
   after { SitePrism.recursion_setting = nil }
