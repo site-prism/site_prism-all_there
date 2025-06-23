@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
     'changelog_uri' => 'https://github.com/site-prism/site_prism-all_there/blob/main/CHANGELOG.md',
     'source_code_uri' => 'https://github.com/site-prism/site_prism-all_there'
   }
-  s.summary     = 'A SitePrism extension that allows you to recurse through your SitePrism Pages or Sections'
+  s.summary     = 'An extension to SitePrism that enables you to recurse through SitePrism Pages and Sections'
   s.description = 'SitePrism AllThere allows you to recursively query page and section structures
 on your page - exclusively for use with the SitePrism gem.'
   s.files        = Dir.glob('lib/**/*') + %w[LICENSE.md README.md]
