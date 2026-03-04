@@ -5,7 +5,7 @@ module SitePrism
     #
     # @api private
     #
-    # This will recurse through all of the objects found on an individual Page/Section level
+    # This will recurse through all the objects found on an individual Page/Section
     # It will perform the `#all_there?` check on each `@instance` item that it is initialized with
     #
     class RecursionChecker
