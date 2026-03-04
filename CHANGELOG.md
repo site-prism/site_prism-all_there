@@ -7,6 +7,10 @@
 
 ### Fixed
 
+## [3.0.8] - 2026-03-04
+### Changed
+- No user facing changes. CI and optimisations only ([luke-hill])
+
 ## [3.0.7] - 2025-06-23
 ### Changed
 - Minor documentation tweaks (No code facing changes)
