@@ -1,4 +1,6 @@
 ## [main] - Unreleased
+### Breaking Changes
+
 ### Removed
 
 ### Added
@@ -31,7 +33,7 @@
 ### Changed
 - Updated CI to test Ruby 3.3 and use latest bundler ([luke-hill] - [#80])
 - Logs for `#all_there?` sub checks are now scoped to show which base class they're being executed from ([luke-hill] - [#82])
-- Updated some rubocop subgems for internal testing (Partially up to date) ([luke-hill])
+- Updated some `rubocop` subgems for internal testing (Partially up to date) ([luke-hill])
 
 ## [3.0.3] - 2024-01-05
 ### Fixed
@@ -46,22 +48,21 @@
 
 ## [3.0.1] - 2023-08-24
 ### Changed
-- Update rubocop and associated sub-gems in dev dependencies ([luke-hill] - [#58] / [#59] / [#60])
+- Update `rubocop` and associated sub-gems in dev dependencies ([luke-hill] - [#58] / [#59] / [#60])
 
 ### Fixed
 - Correctly hashify all args being passed into `#all_there?` ([luke-hill] - [#61])
 
 ## [3.0] - 2023-08-23
-### Added
-- Allow runtime options into `#all_there?` calls ([luke-hill] - [#56])
-
-### Changed
-**Breaking Change**:
-- The gem now will implicitly use no recursion if no parameter is provided
+### Breaking Changes
+- The gem now will implicitly use **no** recursion if no parameter is provided
   - Providing no value will then look at the config parameter
     ([luke-hill] - [#56])
 
-- **Required Ruby Version is now 2.7+** ([luke-hill] - [#56])
+- Required Ruby Version is now 2.7+ ([luke-hill] - [#56])
+
+### Added
+- Allow runtime options into `#all_there?` calls ([luke-hill] - [#56])
 
 ### Fixed
 - Erroneous log messages when using `sections` (plural) check in `#all_there?` ([luke-hill] - [#56])
@@ -76,7 +77,7 @@
 
 ## [2.0.1] - 2023-06-01
 ### Removed
-- A lot of redundant rubocop config has been removed ([luke-hill] - [#51])
+- A lot of redundant `rubocop` config has been removed ([luke-hill] - [#51])
 
 ### Fixed
 - A few erroneous bits of documentation ([luke-hill] - [#51])
@@ -84,6 +85,12 @@
 - Some redundant bits of code now SitePrism v4 is released ([luke-hill] - [#51])
 
 ## [2.0] - 2023-03-06
+### Breaking Changes
+- The gem now treats the config setting as the source of truth
+  - Not setting this value **then** looks at the input parameter
+  - The input parameter is now mandatory
+    ([luke-hill] - [#33])
+
 ### Removed
 - A huge amount of testing scaffolding is now removed ([luke-hill] - [#30])
 
@@ -94,44 +101,38 @@
 
 - Dependabot updates brought into CI flow ([luke-hill] - [#34])
 
-### Changed
-**Breaking Change**:
-- The gem now treats the config setting as the source of truth
-  - Not setting this value **then** looks at the input parameter
-  - The input parameter is now mandatory
-    ([luke-hill] - [#33])
-
 ### Fixed
 - CI build issue where duplicate builds would occur ([luke-hill] - [#39])
 
 ## [1.1] - 2022-12-07
+### Breaking Changes
+- Required Ruby Version is now 2.6+ ([luke-hill] - [#29])
+
 ### Changed
 - GHA now just uses regular `rubocop` / `rspec` instead of `rake` wrapper ([luke-hill] - [#27])
 
-- Bumped internal dev requirements for all rubocop packages to latest versions ([luke-hill] - [#27] / [#29])
-
-- **Required Ruby Version is now 2.6+** ([luke-hill] - [#29])
+- Bumped internal dev requirements for all `rubocop` packages to latest versions ([luke-hill] - [#27] / [#29])
 
 ## [1.0.1] - 2021-09-01
 ### Changed
-- Bumped internal dev requirements for all rubocop packages to latest versions
+- Bumped internal dev requirements for all `rubocop` packages to latest versions
 ([luke-hill] - [#22] / [#23])
 
-- Switched CI from defunct travis to Github Actions ([luke-hill] - [#25])
+- Switched CI from defunct travis to GitHub Actions ([luke-hill] - [#25])
 
 ### Fixed
 - Guarded against the internal checklist throwing a NME if trying to fetch a DSL type that wasn't
   in existence (In theory shouldn't be possible) ([luke-hill] - [#24])
 
 ## [1.0] - 2021-03-29
+### Breaking Changes
+- Required Ruby Version is now 2.5+ ([luke-hill] - [#20])
+
 ### Added
 - Basic debugging for each type of `#all_there?` check ([luke-hill] - [#21])
-([luke-hill])
 
 ### Changed
 - Massively bumped internal dev requirements ([luke-hill])
-
-- **Required Ruby Version is now 2.5+** ([luke-hill] - [#20])
 
 ### Fixed
 - Fixed up some tests which weren't running against the correct code-path ([luke-hill] - [#20])
@@ -143,12 +144,11 @@
 ### Changed
 - Altered rspec tests to only make 1 assertion per test ([luke-hill])
 
-- DRYed up the `ExpectedItems` class to only have the public `array` method call the other defined methods
-([luke-hill])
+- DRYed up the `ExpectedItems` class to only have the public `array` method call the other defined methods ([luke-hill])
 
 ## [0.3.1] - 2019-12-09
 ### Changed
-- Bumped internal rubocop dev requirement from `0.73` to `0.75` ([luke-hill])
+- Bumped internal `rubocop` dev requirement from `0.73` to `0.75` ([luke-hill])
 
 ### Fixed
 - Fixed an issue where `ExpectedItems` wasn't added to the gems load path ([luke-hill] - [#13])
@@ -184,11 +184,10 @@
 
 ## [0.1.1] - 2019-07-03
 ### Removed
-- HACKING.md is now nice and concise, removed almost all the crud! ([luke-hill])
+- `HACKING.md` is now nice and concise, removed almost all the crud! ([luke-hill])
 
 ### Added
-- Configuration settings are now located in the `SitePrism` namespace to sit alongside the main gem
-([luke-hill])
+- Configuration settings are now located in the `SitePrism` namespace to sit alongside the main gem ([luke-hill])
 
 - Added mocked specs to test about 80% of the codebase ([luke-hill])
 
@@ -197,16 +196,16 @@
 ### Changed
 - Altered the build pipeline for travis to run in under half the time (Removing unnecessary items) ([luke-hill])
 
-- Use latest rubocop settings and fix up all cop offenses in suite ([luke-hill])
+- Use latest `rubocop` settings and fix up all cop offenses in suite ([luke-hill])
 
-- Refactored the code into a secondary class: `MappedItems` to try make error triaging easier ([luke-hill])
+- Refactored the code into a secondary class: `MappedItems` to try to make error triaging easier ([luke-hill])
 
 ### Fixed
-- Travis build now passes (ruby-head ignore issue) ([luke-hill])
+- Travis build now passes (`ruby-head` has an issue that is ignored) ([luke-hill])
 
 ## [0.1] - 2019-07-01
 ### Added
-- Base code from site_prism repo ([luke-hill])
+- Migrated base code from site_prism repo ([luke-hill])
 
 <!-- Releases -->
 [main]:       https://github.com/site-prism/site_prism-all_there/compare/v3.0.7...HEAD
