@@ -26,3 +26,8 @@ RSpec/SpecFilePathFormat:
 # The format of this allows the specs to flow a bit better
 RSpec/MessageSpies:
   EnforcedStyle: receive
+
+# This needs fixing. Probably best to be done when we cut off some ruby support as a breaking change
+Style/OneClassPerFile:
+  Exclude:
+    - lib/site_prism/all_there.rb
