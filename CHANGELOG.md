@@ -9,9 +9,16 @@
 
 ### Fixed
 
+## [3.0.9] - 2026-06-11
+### Added
+- CI tests now run against latest `site_prism` version
+
+### Changed
+- No user facing changes. Updated a bunch of documentation and internal code comments ([luke-hill])
+
 ## [3.0.8] - 2026-03-04
 ### Changed
-- No user facing changes. CI and optimisations only ([luke-hill])
+- No user facing changes. CI / optimisations only ([luke-hill])
 
 ## [3.0.7] - 2025-06-23
 ### Changed
@@ -27,13 +34,13 @@
 - Minor documentation tweaks (No code facing changes)
 
 ## [3.0.4] - 2024-04-02
-### Added
-- Security policy for repo ([luke-hill])
-
 ### Changed
 - Updated CI to test Ruby 3.3 and use latest bundler ([luke-hill] - [#80])
 - Logs for `#all_there?` sub checks are now scoped to show which base class they're being executed from ([luke-hill] - [#82])
 - Updated some `rubocop` subgems for internal testing (Partially up to date) ([luke-hill])
+
+### Security
+- Added Security policy for repo ([luke-hill])
 
 ## [3.0.3] - 2024-01-05
 ### Fixed
@@ -208,7 +215,9 @@
 - Migrated base code from site_prism repo ([luke-hill])
 
 <!-- Releases -->
-[main]:       https://github.com/site-prism/site_prism-all_there/compare/v3.0.7...HEAD
+[main]:       https://github.com/site-prism/site_prism-all_there/compare/v3.0.9...HEAD
+[3.0.9]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0.8...v3.0.9
+[3.0.8]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0.7...v3.0.8
 [3.0.7]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0.6...v3.0.7
 [3.0.6]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0.5...v3.0.6
 [3.0.5]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0.4...v3.0.5
