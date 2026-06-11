@@ -11,10 +11,13 @@
 
 ## [3.0.9] - 2026-06-11
 ### Added
-- CI tests now run against latest `site_prism` version
+- CI tests now run against latest `site_prism` version ([luke-hill])
 
 ### Changed
 - No user facing changes. Updated a bunch of documentation and internal code comments ([luke-hill])
+
+### Security
+- Fixed CI workflow issue for exposing sensitive info ([luke-hill])
 
 ## [3.0.8] - 2026-03-04
 ### Changed
@@ -22,7 +25,7 @@
 
 ## [3.0.7] - 2025-06-23
 ### Changed
-- Minor documentation tweaks (No code facing changes)
+- Minor documentation tweaks (No code facing changes) ([luke-hill])
 
 ## [3.0.6] - 2024-12-20
 ### Fixed
@@ -31,7 +34,7 @@
 
 ## [3.0.5] - 2024-06-13
 ### Changed
-- Minor documentation tweaks (No code facing changes)
+- Minor documentation tweaks (No code facing changes) ([luke-hill])
 
 ## [3.0.4] - 2024-04-02
 ### Changed
