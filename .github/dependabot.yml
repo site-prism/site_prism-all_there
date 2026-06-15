@@ -1,10 +1,16 @@
 version: 2
 updates:
-  - package-ecosystem: "bundler"
-    directory: "/"
+  - package-ecosystem: bundler
+    directory: '/'
     schedule:
-      interval: "weekly"
-  - package-ecosystem: "github-actions"
-    directory: "/"
+      interval: daily
+    cooldown:
+      semver-major-days: 30
+      semver-minor-days: 14
+      semver-patch-days: 7
+  - package-ecosystem: github-actions
+    directory: '/'
     schedule:
-      interval: "monthly"
+      interval: weekly
+    cooldown:
+      default-days: 14
