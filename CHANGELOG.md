@@ -11,6 +11,8 @@
 
 ### Security
 - Add dependency cooldowns for all automated updates ([luke-hill] - [#159])
+- Use workflow SHA refs instead of verbose versions ([luke-hill] - [#160])
+  - This is to mitigate against supply chain attacks on GitHub Actions workflows
 
 ## [3.0.9] - 2026-06-11
 ### Added
