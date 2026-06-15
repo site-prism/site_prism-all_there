@@ -1,4 +1,5 @@
 Gemfile.lock
+vendor/bundle/
 coverage/*
 doc/
 .yardoc/
