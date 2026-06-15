@@ -9,6 +9,9 @@
 
 ### Fixed
 
+### Security
+- Add dependency cooldowns for all automated updates ([luke-hill] - [#159])
+
 ## [3.0.9] - 2026-06-11
 ### Added
 - CI tests now run against latest `site_prism` version ([luke-hill])
@@ -247,6 +250,7 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
+[#159]:       https://github.com/site-prism/site_prism-all_there/pull/159
 [#82]:        https://github.com/site-prism/site_prism-all_there/pull/82
 [#80]:        https://github.com/site-prism/site_prism-all_there/pull/80
 [#72]:        https://github.com/site-prism/site_prism-all_there/pull/72
