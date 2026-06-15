@@ -10,9 +10,9 @@
 ### Fixed
 
 ### Security
-- Add dependency cooldowns for all automated updates ([luke-hill] - [#159])
 - Use workflow SHA refs instead of verbose versions ([luke-hill] - [#162])
   - This is to mitigate against supply chain attacks on GitHub Actions workflows
+- Add dependency cooldowns for all automated updates ([luke-hill] - [#159])
 
 ## [3.0.9] - 2026-06-11
 ### Added
@@ -252,8 +252,8 @@
 [luke-hill]:  https://github.com/luke-hill
 
 <!-- Issue/PR References to the repo -->
-[#159]:       https://github.com/site-prism/site_prism-all_there/pull/159
 [#162]:       https://github.com/site-prism/site_prism-all_there/pull/162
+[#159]:       https://github.com/site-prism/site_prism-all_there/pull/159
 [#82]:        https://github.com/site-prism/site_prism-all_there/pull/82
 [#80]:        https://github.com/site-prism/site_prism-all_there/pull/80
 [#72]:        https://github.com/site-prism/site_prism-all_there/pull/72
