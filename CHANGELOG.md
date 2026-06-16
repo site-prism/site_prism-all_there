@@ -18,9 +18,6 @@
 ### Added
 - CI tests now run against latest `site_prism` version ([luke-hill])
 
-### Changed
-- No user facing changes. Updated a bunch of documentation and internal code comments ([luke-hill])
-
 ### Security
 - Fixed CI workflow issue for exposing sensitive info ([luke-hill])
 
