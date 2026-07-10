@@ -10,6 +10,9 @@
 ### Fixed
 
 ### Security
+
+## [3.0.10] - 2026-07-10
+### Security
 - Use workflow SHA refs instead of verbose versions ([luke-hill] - [#162])
   - This is to mitigate against supply chain attacks on GitHub Actions workflows
 - Add dependency cooldowns for all automated updates ([luke-hill] - [#159])
@@ -220,7 +223,8 @@
 - Migrated base code from site_prism repo ([luke-hill])
 
 <!-- Releases -->
-[main]:       https://github.com/site-prism/site_prism-all_there/compare/v3.0.9...HEAD
+[main]:       https://github.com/site-prism/site_prism-all_there/compare/v3.0.10...HEAD
+[3.0.10]:     https://github.com/site-prism/site_prism-all_there/compare/v3.0.9...v3.0.10
 [3.0.9]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0.8...v3.0.9
 [3.0.8]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0.7...v3.0.8
 [3.0.7]:      https://github.com/site-prism/site_prism-all_there/compare/v3.0.6...v3.0.7
